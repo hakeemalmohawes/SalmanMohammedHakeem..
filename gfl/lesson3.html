@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 3 - GFL</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 3: Control Objectives and Operating Principles</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Describe the primary control goals of Grid-Following Inverters</li>
+      <li>Understand current injection, power factor, and voltage tracking</li>
+      <li>Explore typical control loop structures in GFL operation</li>
+    </ul>
+
+    <h2>🌌 1. Primary Control Objectives</h2>
+    <ul>
+      <li><strong>Active Power Injection:</strong> Deliver real power from the DC source to the grid</li>
+      <li><strong>Reactive Power Control:</strong> Adjust reactive power for voltage support or compliance</li>
+      <li><strong>Power Factor Regulation:</strong> Maintain a desired power factor (often unity)</li>
+      <li><strong>Current Limitation:</strong> Protect inverter components during disturbances</li>
+    </ul>
+
+    <h2>📊 2. Voltage Reference Tracking</h2>
+    <p>GFL inverters measure grid voltage and regulate their current output to track this reference. The PLL plays a key role in identifying the voltage phase angle. Current commands are generated in the dq reference frame and translated back to abc phase signals for PWM generation.</p>
+
+    <h2>🔄 3. Control Architecture</h2>
+    <ul>
+      <li><strong>Outer Power Control Loop:</strong> Sets current references based on P/Q commands</li>
+      <li><strong>Inner Current Control Loop:</strong> Ensures injected current matches the reference</li>
+      <li><strong>PI Controllers:</strong> Commonly used to minimize error in both loops</li>
+    </ul>
+
+    <h2>🔧 4. Additional Features</h2>
+    <ul>
+      <li>Anti-islanding protection to avoid unintentional islanded operation</li>
+      <li>Voltage ride-through to remain online during sags</li>
+      <li>Dynamic reactive support depending on grid codes</li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFL control focuses on current injection aligned with grid voltage</li>
+      <li>Current control is performed in a dq synchronous frame</li>
+      <li>Power factor, voltage tracking, and anti-islanding are key features</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What is the main goal of a GFL inverter?</p>
+        <label><input type="radio" name="q1"> Set voltage amplitude</label>
+        <label><input type="radio" name="q1"> Inject current in sync with grid voltage</label>
+        <label><input type="radio" name="q1"> Create grid reference</label>
+        <label><input type="radio" name="q1"> Rotate mechanical load</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What role does the outer loop play?</p>
+        <label><input type="radio" name="q2"> It regulates harmonic distortion</label>
+        <label><input type="radio" name="q2"> It generates current references based on power demand</label>
+        <label><input type="radio" name="q2"> It controls PWM switching</label>
+        <label><input type="radio" name="q2"> It processes PLL output</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What does the inner loop regulate?</p>
+        <label><input type="radio" name="q3"> PLL voltage</label>
+        <label><input type="radio" name="q3"> Voltage amplitude</label>
+        <label><input type="radio" name="q3"> Injected current</label>
+        <label><input type="radio" name="q3"> Transformer phase</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. Why is dq transformation used?</p>
+        <label><input type="radio" name="q4"> To track temperature</label>
+        <label><input type="radio" name="q4"> To simplify current control in a rotating frame</label>
+        <label><input type="radio" name="q4"> To convert AC to DC</label>
+        <label><input type="radio" name="q4"> To control the battery inverter</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. Which of the following is NOT a typical GFL feature?</p>
+        <label><input type="radio" name="q5"> Anti-islanding protection</label>
+        <label><input type="radio" name="q5"> Voltage-forming behavior</label>
+        <label><input type="radio" name="q5"> Current injection control</label>
+        <label><input type="radio" name="q5"> Power factor regulation</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson2.html">← Previous Lesson</a>
+      <a href="lesson4.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 4 - GFL</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 4: Inner and Outer Control Loops in GFLs</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Differentiate between inner and outer control loops in GFL inverters</li>
+      <li>Understand the function and tuning of PI controllers</li>
+      <li>Explore how loop dynamics affect inverter performance</li>
+    </ul>
+
+    <h2>🔢 1. Control Loop Hierarchy</h2>
+    <p>GFL inverters rely on a nested loop structure for precise control:</p>
+    <ul>
+      <li><strong>Outer Loop:</strong> Controls active and reactive power output</li>
+      <li><strong>Inner Loop:</strong> Regulates the dq-axis current injection into the grid</li>
+    </ul>
+
+    <h2>🌐 2. Outer Power Control Loop</h2>
+    <p>The outer loop receives power references (P<sub>ref</sub>, Q<sub>ref</sub>) and converts them into current references (i<sub>dref</sub>, i<sub>qref</sub>) using voltage feedback and a feedforward structure. This loop is slower, ensuring stable transitions without sudden current spikes.</p>
+
+    <h2>⚙️ 3. Inner Current Control Loop</h2>
+    <p>This loop compares i<sub>dref</sub> and i<sub>qref</sub> with measured current (i<sub>d</sub>, i<sub>q</sub>) and applies PI controllers to minimize the error. It operates in the rotating dq frame, simplifying decoupling and improving control bandwidth. The output is voltage commands sent to the PWM module.</p>
+
+    <h2>🔄 4. Tuning and Performance</h2>
+    <p>Stability and dynamic performance depend on proper tuning. Typically:</p>
+    <ul>
+      <li>Inner loop bandwidth > Outer loop bandwidth</li>
+      <li>Gain and integrator values are selected based on inverter impedance and grid strength</li>
+      <li>Feedforward terms may be added to improve response and decoupling</li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>Outer loop sets power delivery; inner loop enforces current injection</li>
+      <li>Both loops use PI controllers for error minimization</li>
+      <li>Proper tuning ensures fast, stable, and compliant inverter operation</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What does the outer loop in a GFL inverter regulate?</p>
+        <label><input type="radio" name="q1"> Switching frequency</label>
+        <label><input type="radio" name="q1"> PLL gain</label>
+        <label><input type="radio" name="q1"> Active and reactive power</label>
+        <label><input type="radio" name="q1"> Voltage waveform</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What is the primary role of the inner loop?</p>
+        <label><input type="radio" name="q2"> Create voltage reference</label>
+        <label><input type="radio" name="q2"> Measure PLL phase</label>
+        <label><input type="radio" name="q2"> Control injected current</label>
+        <label><input type="radio" name="q2"> Manage grid frequency</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What kind of controller is typically used in both loops?</p>
+        <label><input type="radio" name="q3"> Proportional-Integral (PI)</label>
+        <label><input type="radio" name="q3"> On-Off controller</label>
+        <label><input type="radio" name="q3"> Deadbeat controller</label>
+        <label><input type="radio" name="q3"> Sliding mode</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. Why is the dq frame used in the inner loop?</p>
+        <label><input type="radio" name="q4"> To inject voltage harmonics</label>
+        <label><input type="radio" name="q4"> To simplify decoupled control</label>
+        <label><input type="radio" name="q4"> To slow down the controller</label>
+        <label><input type="radio" name="q4"> To bypass PLL</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. How are the two loop bandwidths related?</p>
+        <label><input type="radio" name="q5"> Outer > Inner</label>
+        <label><input type="radio" name="q5"> Inner > Outer</label>
+        <label><input type="radio" name="q5"> Both equal</label>
+        <label><input type="radio" name="q5"> No relationship</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson3.html">← Previous Lesson</a>
+      <a href="lesson5.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

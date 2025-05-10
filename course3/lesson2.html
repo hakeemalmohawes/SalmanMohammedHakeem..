@@ -1,0 +1,114 @@
+<!-- File: course3/lesson2.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 2 - Course 3</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 2: Modeling Approaches for GFM and GFL Inverters</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand the different modeling approaches used for GFM and GFL inverters</li>
+      <li>Compare how control objectives shape the modeling structure</li>
+      <li>Recognize why duality affects how we analyze system-level dynamics</li>
+    </ul>
+
+    <h2>1. Control-Oriented Modeling</h2>
+    <p>GFM and GFL inverters require distinct modeling frameworks due to their different control roles. GFM inverters are typically modeled as voltage-controlled voltage sources with inner current loops and outer voltage and frequency control. In contrast, GFL inverters are modeled as current-controlled sources relying on phase-locked loops (PLLs) for synchronization.</p>
+
+    <h2>2. Structural Differences</h2>
+    <ul>
+      <li><strong>GFM:</strong> Has internal voltage reference, droop control, and synchronization by design.</li>
+      <li><strong>GFL:</strong> Requires external grid reference; modeled with PLLs, current controllers, and feedforward loops.</li>
+    </ul>
+
+    <h2>3. Modeling Implications of Duality</h2>
+    <p>Duality allows us to represent both inverter types under a unified framework where roles can be flipped under transformation. This is useful for stability studies, fault analysis, and inverter coordination strategies.</p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFM and GFL inverters have different control loops and modeling priorities</li>
+      <li>Understanding the modeling structure is essential for dynamic studies</li>
+      <li>Duality enables cross-comparison and unified analysis</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What type of control structure is common in GFM inverters?</p>
+        <label><input type="radio" name="q1"> Phase-locked loop with feedforward</label>
+        <label><input type="radio" name="q1"> Voltage source with droop control</label>
+        <label><input type="radio" name="q1"> Mechanical governor control</label>
+        <label><input type="radio" name="q1"> Direct diesel interfacing</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What do GFL inverters depend on to synchronize?</p>
+        <label><input type="radio" name="q2"> Frequency droop</label>
+        <label><input type="radio" name="q2"> PLL (Phase-Locked Loop)</label>
+        <label><input type="radio" name="q2"> Islanding logic</label>
+        <label><input type="radio" name="q2"> Overcurrent tripping</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. Why are GFL inverters considered current-controlled?</p>
+        <label><input type="radio" name="q3"> Because they adjust grid voltage</label>
+        <label><input type="radio" name="q3"> Because they regulate output current to match grid signals</label>
+        <label><input type="radio" name="q3"> Because they mimic generators</label>
+        <label><input type="radio" name="q3"> Because they operate offline</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What does the concept of duality allow in modeling?</p>
+        <label><input type="radio" name="q4"> Removal of all controls</label>
+        <label><input type="radio" name="q4"> A unified framework for GFM and GFL analysis</label>
+        <label><input type="radio" name="q4"> Replacement of all PLLs</label>
+        <label><input type="radio" name="q4"> Increase in mechanical inertia</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. Which inverter uses internal voltage reference as part of its model?</p>
+        <label><input type="radio" name="q5"> GFL inverter</label>
+        <label><input type="radio" name="q5"> GFM inverter</label>
+        <label><input type="radio" name="q5"> Grid transformer</label>
+        <label><input type="radio" name="q5"> HVDC bridge</label>
+      </div>
+
+     <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson1.html">← Previous Lesson</a>
+      <a href="lesson3.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

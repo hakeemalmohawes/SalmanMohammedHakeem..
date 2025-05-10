@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 4 - Grid-Forming Inverters</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 4: Types of Grid-Forming Control Strategies</h1>
+  </header>
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Differentiate between the main types of GFM control strategies</li>
+      <li>Understand their operating principles and practical implications</li>
+      <li>Explore their relevance to real-world power systems</li>
+    </ul>
+
+    <h2>1. Overview of Control Types</h2>
+    <p>Grid-forming inverters can be implemented using various control strategies that define how they generate voltage and respond to system dynamics. The most prominent types are:</p>
+    <ul>
+      <li>Droop Control</li>
+      <li>Virtual Synchronous Machine (VSM)</li>
+      <li>Matching Control</li>
+      <li>Dispatchable Virtual Oscillator Control (dVOC)</li>
+    </ul>
+
+    <h2>2. Droop Control</h2>
+    <p>A traditional method where frequency and voltage are adjusted based on active and reactive power flow, respectively. It’s simple, scalable, and enables decentralized operation. However, tuning and dynamic performance can be challenging.</p>
+
+    <h2>3. Virtual Synchronous Machine (VSM)</h2>
+    <p>This method emulates the swing equation of a synchronous generator. It provides inertial response and damping, helping stabilize frequency. VSM is especially useful in low-inertia systems where traditional stability mechanisms are weak.</p>
+
+    <h2>4. Matching Control</h2>
+    <p>This method derives control laws by directly matching the behavior of synchronous machines using circuit-theoretic equivalence. It allows strong control of voltage and current and is well-suited for fast converter response times.</p>
+
+    <h2>5. Dispatchable Virtual Oscillator Control (dVOC)</h2>
+    <p>A more recent approach where the inverter mimics a nonlinear oscillator that locks into phase with other devices. dVOC is designed for plug-and-play compatibility, fast response, and grid support during large transients.</p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>Multiple GFM control types exist, each with unique features and applications</li>
+      <li>Droop control and VSM are widely used due to their simplicity and familiarity</li>
+      <li>Advanced methods like dVOC are emerging for next-generation grid needs</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. Which GFM strategy is based on the swing equation?</p>
+        <label><input type="radio" name="q1"> Droop control</label>
+        <label><input type="radio" name="q1"> VSM</label>
+        <label><input type="radio" name="q1"> Matching control</label>
+        <label><input type="radio" name="q1"> dVOC</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What does dVOC use to coordinate with other inverters?</p>
+        <label><input type="radio" name="q2"> PLL synchronization</label>
+        <label><input type="radio" name="q2"> Oscillator phase locking</label>
+        <label><input type="radio" name="q2"> Reactive injection</label>
+        <label><input type="radio" name="q2"> Control relays</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. Which control type focuses on circuit-theoretic equivalence?</p>
+        <label><input type="radio" name="q3"> Droop</label>
+        <label><input type="radio" name="q3"> Matching control</label>
+        <label><input type="radio" name="q3"> VSM</label>
+        <label><input type="radio" name="q3"> Voltage-following</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What is a key advantage of droop control?</p>
+        <label><input type="radio" name="q4"> Central coordination</label>
+        <label><input type="radio" name="q4"> Plug-and-play operation</label>
+        <label><input type="radio" name="q4"> Simplicity and scalability</label>
+        <label><input type="radio" name="q4"> Battery optimization</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. Which control strategy is best for fast dynamic support?</p>
+        <label><input type="radio" name="q5"> VSM</label>
+        <label><input type="radio" name="q5"> Matching control</label>
+        <label><input type="radio" name="q5"> dVOC</label>
+        <label><input type="radio" name="q5"> Droop control</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson3.html">← Previous Lesson</a>
+      <a href="lesson5.html">Next Lesson →</a>
+    </div>
+  </div>
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

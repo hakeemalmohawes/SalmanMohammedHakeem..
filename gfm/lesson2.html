@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 2 - GFM</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 2: Voltage and Frequency Regulation in Grid-Forming Inverters</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand how GFM inverters regulate voltage and frequency</li>
+      <li>Explain droop control concepts</li>
+      <li>Compare GFM regulation with that of synchronous generators</li>
+    </ul>
+
+    <h2>⚖️ 1. Voltage and Frequency as Primary Control Targets</h2>
+    <p>Grid-Forming Inverters (GFMs) actively regulate <strong>both voltage amplitude and frequency</strong>, unlike grid-following inverters that depend on externally measured signals. A GFM behaves as an AC voltage source, capable of independently establishing grid voltage at its terminals.</p>
+
+    <h2>⏰ 2. Droop Control Fundamentals</h2>
+    <p>One of the most widely used methods for GFM control is <strong>droop control</strong>. In this scheme, the inverter’s output frequency is reduced (droops) as active power increases, while voltage magnitude decreases with increasing reactive power. This mirrors the behavior of traditional generators and enables decentralized coordination among multiple GFMs without communication.</p>
+    <p><strong>Frequency droop:</strong> Δf = -K_p (P - P_ref)<br>
+    <strong>Voltage droop:</strong> ΔV = -K_q (Q - Q_ref)</p>
+
+    <h2>📈 3. Power Sharing via Droop</h2>
+    <p>In systems with multiple GFMs, droop characteristics ensure proportional power sharing. If two GFMs have identical droop settings, they naturally divide load based on their ratings. This method avoids the need for centralized dispatch or fast communication links.</p>
+
+    <h2>🚀 4. Black Start and Islanding Capability</h2>
+    <p>Because GFM inverters do not rely on a pre-existing voltage signal, they can start up and energize a de-energized grid, a feature known as <strong>black start</strong>. They can also seamlessly operate in <strong>islanded mode</strong>, maintaining local voltage and frequency without external references.</p>
+
+    <h2>🧠 5. Mimicking Synchronous Generator Behavior</h2>
+    <p>Droop control and other GFM strategies are inspired by the dynamics of synchronous machines. This analogy enables GFMs to integrate more naturally into power systems originally designed around rotating machinery. It also improves compatibility with protection schemes and system dynamics.</p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFM inverters regulate both voltage and frequency directly</li>
+      <li>Droop control allows for decentralized power sharing</li>
+      <li>They can perform black start and operate in islanded mode</li>
+      <li>They emulate synchronous generator behavior, aiding system integration</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What does a Grid-Forming Inverter control directly?</p>
+        <label><input type="radio" name="q1"> Only current</label>
+        <label><input type="radio" name="q1"> Frequency and voltage</label>
+        <label><input type="radio" name="q1"> Phase angle only</label>
+        <label><input type="radio" name="q1"> Resistance and reactance</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What does frequency droop control do?</p>
+        <label><input type="radio" name="q2"> Increase reactive power output</label>
+        <label><input type="radio" name="q2"> Decrease voltage with active power</label>
+        <label><input type="radio" name="q2"> Adjust frequency based on active power</label>
+        <label><input type="radio" name="q2"> Regulate transformer tap settings</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. Why is droop control beneficial in multi-inverter systems?</p>
+        <label><input type="radio" name="q3"> It increases efficiency</label>
+        <label><input type="radio" name="q3"> It enables autonomous power sharing</label>
+        <label><input type="radio" name="q3"> It disables reactive power</label>
+        <label><input type="radio" name="q3"> It reduces inverter cost</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What feature allows a GFM to energize a dead grid?</p>
+        <label><input type="radio" name="q4"> Phase-lock loop</label>
+        <label><input type="radio" name="q4"> Black start capability</label>
+        <label><input type="radio" name="q4"> Islanding detection</label>
+        <label><input type="radio" name="q4"> Grid-following mode</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. Mimicking synchronous machines improves:</p>
+        <label><input type="radio" name="q5"> Load shedding</label>
+        <label><input type="radio" name="q5"> Compatibility with existing power systems</label>
+        <label><input type="radio" name="q5"> Battery lifespan</label>
+        <label><input type="radio" name="q5"> Cable sizing</label>
+      </div>
+
+     <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson1.html">← Previous Lesson</a>
+      <a href="lesson3.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

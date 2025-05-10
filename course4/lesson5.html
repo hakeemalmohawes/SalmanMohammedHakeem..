@@ -1,0 +1,122 @@
+<!-- File: course4/lesson5.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 5 - Course 4</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 5: Impedance Modeling for Converter-Grid Interaction</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand the concept of impedance-based modeling</li>
+      <li>Learn how converters interact with the grid through impedance</li>
+      <li>Explore how impedance models help evaluate system stability</li>
+    </ul>
+
+    <h2>1. Why Impedance Modeling?</h2>
+    <p>Impedance models capture the frequency-dependent behavior of a converter and its interaction with the grid. These models are essential for studying stability, resonance, and controller interactions in weak or complex grids.</p>
+
+    <h2>2. Converter Impedance Representation</h2>
+    <p>Converters are represented using either input or output impedance, depending on the direction of analysis. Common formats include:</p>
+    <ul>
+      <li><strong>d-q impedance models:</strong> Represent converter dynamics in synchronous reference frame</li>
+      <li><strong>Nyquist-based impedance:</strong> For frequency-domain stability assessment</li>
+      <li><strong>Black-box impedance:</strong> Measured from simulations or hardware</li>
+    </ul>
+
+    <h2>3. Applications in System Studies</h2>
+    <p>Impedance models help:
+      <ul>
+        <li>Evaluate grid strength and converter stability margins</li>
+        <li>Design robust controllers to avoid resonance</li>
+        <li>Understand multi-inverter interaction in weak grids</li>
+      </ul>
+    </p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>Impedance modeling is key for understanding grid-converter dynamics</li>
+      <li>d-q models and Nyquist plots are common tools</li>
+      <li>Used to design stable, coordinated control in weak or inverter-rich grids</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What does impedance modeling help analyze?</p>
+        <label><input type="radio" name="q1"> Energy storage degradation</label>
+        <label><input type="radio" name="q1"> Grid-converter dynamic interaction</label>
+        <label><input type="radio" name="q1"> Temperature drift in transformers</label>
+        <label><input type="radio" name="q1"> Grounding loop resistance</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What type of impedance model uses the synchronous reference frame?</p>
+        <label><input type="radio" name="q2"> RMS impedance</label>
+        <label><input type="radio" name="q2"> ABC impedance</label>
+        <label><input type="radio" name="q2"> d-q impedance model</label>
+        <label><input type="radio" name="q2"> LCL filter impedance</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What is Nyquist-based impedance modeling useful for?</p>
+        <label><input type="radio" name="q3"> Measuring cable lengths</label>
+        <label><input type="radio" name="q3"> Frequency-domain stability analysis</label>
+        <label><input type="radio" name="q3"> Phase alignment</label>
+        <label><input type="radio" name="q3"> Overload tripping</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What is a “black-box” impedance model?</p>
+        <label><input type="radio" name="q4"> A thermal model</label>
+        <label><input type="radio" name="q4"> A simplified physical equivalent</label>
+        <label><input type="radio" name="q4"> An empirically measured frequency response</label>
+        <label><input type="radio" name="q4"> A fixed delay filter</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. Which condition especially benefits from impedance analysis?</p>
+        <label><input type="radio" name="q5"> Purely resistive grids</label>
+        <label><input type="radio" name="q5"> Weak grids with high converter penetration</label>
+        <label><input type="radio" name="q5"> Mechanical power trains</label>
+        <label><input type="radio" name="q5"> Thermal rise in cables</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson4.html">← Previous Lesson</a>
+      <a href="lesson6.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

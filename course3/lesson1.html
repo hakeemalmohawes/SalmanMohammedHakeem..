@@ -1,0 +1,111 @@
+<!-- File: course3/lesson1.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 1 - Course 3</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 1: Introduction to Grid-Forming vs Grid-Following Inverters</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Define Grid-Forming (GFM) and Grid-Following (GFL) inverters</li>
+      <li>Understand the concept of duality in power system control</li>
+      <li>Recognize the foundational differences in behavior and control roles</li>
+    </ul>
+
+    <h2>1. What Are GFM and GFL Inverters?</h2>
+    <p><strong>Grid-Forming inverters</strong> establish the voltage and frequency reference for the grid. They are essential in islanded or low-inertia systems. <strong>Grid-Following inverters</strong> depend on an external voltage reference and adjust their output to follow the grid.</p>
+
+    <h2>2. Control Philosophy and Duality</h2>
+    <p>The term "duality" refers to the complementary nature of GFM and GFL inverters. While GFM devices act like voltage sources (setting the rhythm), GFL devices behave like current sources (dancing to the rhythm). They rely on different assumptions and measurements for their control loops.</p>
+
+    <h2>3. Importance in Modern Power Systems</h2>
+    <p>With growing renewable penetration, understanding the interaction between GFM and GFL inverters is critical. This course explores how their dual roles can be coordinated to maintain stability, especially in inverter-dominated grids.</p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFM inverters define grid conditions; GFL inverters respond to them</li>
+      <li>The duality framework helps analyze their interaction</li>
+      <li>Understanding this is key to designing stable, inverter-based grids</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What does a Grid-Forming inverter do?</p>
+        <label><input type="radio" name="q1"> Follows external voltage signals</label>
+        <label><input type="radio" name="q1"> Ignores grid frequency</label>
+        <label><input type="radio" name="q1"> Sets the grid’s voltage and frequency</label>
+        <label><input type="radio" name="q1"> Only charges batteries</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What is the main role of a Grid-Following inverter?</p>
+        <label><input type="radio" name="q2"> Create frequency reference</label>
+        <label><input type="radio" name="q2"> Follow existing voltage and frequency</label>
+        <label><input type="radio" name="q2"> Provide inertia to the grid</label>
+        <label><input type="radio" name="q2"> Operate independently of the grid</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What does the concept of “duality” describe?</p>
+        <label><input type="radio" name="q3"> Identical roles of all inverters</label>
+        <label><input type="radio" name="q3"> Relationship between voltage and resistance</label>
+        <label><input type="radio" name="q3"> Complementary control behaviors of GFM and GFL</label>
+        <label><input type="radio" name="q3"> None of the above</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. Which inverter behaves like a current source?</p>
+        <label><input type="radio" name="q4"> Grid-forming inverter</label>
+        <label><input type="radio" name="q4"> Grid-following inverter</label>
+        <label><input type="radio" name="q4"> Diesel generator</label>
+        <label><input type="radio" name="q4"> Flywheel inverter</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. Why is understanding GFM and GFL interaction important?</p>
+        <label><input type="radio" name="q5"> It reduces solar radiation</label>
+        <label><input type="radio" name="q5"> It simplifies wiring</label>
+        <label><input type="radio" name="q5"> It helps design stable inverter-based grids</label>
+        <label><input type="radio" name="q5"> It increases fossil fuel efficiency</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">← Back to Course</a>
+      <a href="lesson2.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

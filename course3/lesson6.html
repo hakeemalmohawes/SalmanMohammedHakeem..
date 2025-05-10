@@ -1,0 +1,115 @@
+<!-- File: course3/lesson6.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 6 - Course 3</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 6: Inverter-Based Resource Dispatch in Dual Control Frameworks</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand how inverter dispatch is managed under dual control concepts</li>
+      <li>Explore how control modes affect resource contribution and scheduling</li>
+      <li>Learn the impact of dispatch algorithms on stability and efficiency</li>
+    </ul>
+
+    <h2>1. Dispatching Inverter Resources</h2>
+    <p>Inverter-based resources can be dispatched based on power needs, grid strength, and system objectives. GFM inverters provide support services like frequency regulation, while GFL inverters focus on following active and reactive power setpoints.</p>
+
+    <h2>2. Dual Control in Dispatch</h2>
+    <p>The duality theory enables a control structure where both GFM and GFL inverters can participate in grid support, each with clearly defined roles. This allows dispatch systems to assign tasks such as voltage control to GFM units and tracking to GFL units based on grid conditions.</p>
+
+    <h2>3. Role of Coordination and Setpoints</h2>
+    <ul>
+      <li><strong>GFM Setpoints:</strong> Typically set power droop curves, frequency targets, or reactive support policies</li>
+      <li><strong>GFL Setpoints:</strong> Receive real-time current references based on system demand and inverter limits</li>
+      <li><strong>Coordination:</strong> Dispatch algorithms must respect system constraints, latency, and response times</li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>Inverter dispatch must balance system goals with inverter capabilities</li>
+      <li>GFM and GFL roles are complementary in dispatch architecture</li>
+      <li>Proper coordination ensures efficient and stable operation</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What service do GFM inverters typically provide?</p>
+        <label><input type="radio" name="q1"> Current tracking only</label>
+        <label><input type="radio" name="q1"> Frequency and voltage regulation</label>
+        <label><input type="radio" name="q1"> Direct mechanical power</label>
+        <label><input type="radio" name="q1"> Fuel switching</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What is a key task of GFL inverters in dispatch?</p>
+        <label><input type="radio" name="q2"> Set frequency reference</label>
+        <label><input type="radio" name="q2"> Track current setpoints</label>
+        <label><input type="radio" name="q2"> Control inertia directly</label>
+        <label><input type="radio" name="q2"> Control capacitor ESR</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What enables both inverter types to contribute effectively?</p>
+        <label><input type="radio" name="q3"> Removing droop</label>
+        <label><input type="radio" name="q3"> Unified dispatch and dual control roles</label>
+        <label><input type="radio" name="q3"> Using fossil fuel backup</label>
+        <label><input type="radio" name="q3"> Converting all to GFLs</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What do GFM setpoints usually include?</p>
+        <label><input type="radio" name="q4"> PLL references</label>
+        <label><input type="radio" name="q4"> Droop curves and reactive power policies</label>
+        <label><input type="radio" name="q4"> Insulation resistance</label>
+        <label><input type="radio" name="q4"> DC-DC conversion parameters</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What must be respected by dispatch algorithms?</p>
+        <label><input type="radio" name="q5"> Cable color codes</label>
+        <label><input type="radio" name="q5"> Inverter thermal paint</label>
+        <label><input type="radio" name="q5"> Response time and system constraints</label>
+        <label><input type="radio" name="q5"> Local TV interference</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson5.html">← Previous Lesson</a>
+      <a href="lesson7.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

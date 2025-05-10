@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 1 - GFL</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 1: Introduction to Grid-Following Inverters</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Define what Grid-Following Inverters (GFLs) are</li>
+      <li>Understand how GFLs interact with the power grid</li>
+      <li>Recognize the role of GFLs in today’s renewable energy systems</li>
+    </ul>
+
+    <h2>⚖️ 1. What Is a Grid-Following Inverter?</h2>
+    <p>A <strong>Grid-Following Inverter (GFL)</strong> is a type of power electronic converter that injects electrical power into the grid by synchronizing its output current with the voltage waveform of the grid. It does this by sensing the grid voltage, using a phase-locked loop (PLL), and then regulating the injected current accordingly.</p>
+
+    <h2>🌌 2. Key Characteristics</h2>
+    <ul>
+      <li>Acts as a current source, not a voltage source</li>
+      <li>Requires an existing grid voltage to operate</li>
+      <li>Dependent on a Phase-Locked Loop (PLL) to stay synchronized</li>
+    </ul>
+
+    <h2>📊 3. Role in Renewable Integration</h2>
+    <p>GFL inverters are widely used in grid-tied solar PV, wind, and battery systems. They convert DC power from these sources to AC, matching the grid's voltage and frequency. Their control structure is well suited for stable, strong grids with sufficient inertia and grid-forming sources already present.</p>
+
+    <h2>⚠️ 4. Limitations</h2>
+    <ul>
+      <li>Cannot operate in islanded or black start conditions</li>
+      <li>Reliant on the grid for synchronization and operation</li>
+      <li>May disconnect during faults or disturbances</li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFL inverters follow the grid, injecting current based on sensed voltage</li>
+      <li>They are suitable for use in strong grids with traditional synchronous machines</li>
+      <li>GFLs are central to many modern renewable deployments</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What type of source is a Grid-Following Inverter?</p>
+        <label><input type="radio" name="q1"> Voltage source</label>
+        <label><input type="radio" name="q1"> Current source</label>
+        <label><input type="radio" name="q1"> Power source</label>
+        <label><input type="radio" name="q1"> Inertia source</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What component does a GFL use to stay in sync with the grid?</p>
+        <label><input type="radio" name="q2"> Voltage controller</label>
+        <label><input type="radio" name="q2"> Current limiter</label>
+        <label><input type="radio" name="q2"> Phase-Locked Loop (PLL)</label>
+        <label><input type="radio" name="q2"> Relay switch</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. Where are GFLs commonly used?</p>
+        <label><input type="radio" name="q3"> Grid restoration systems</label>
+        <label><input type="radio" name="q3"> Grid-tied renewable energy systems</label>
+        <label><input type="radio" name="q3"> Off-grid systems only</label>
+        <label><input type="radio" name="q3"> Black start units</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. Which of the following is a limitation of GFL inverters?</p>
+        <label><input type="radio" name="q4"> Cannot follow grid voltage</label>
+        <label><input type="radio" name="q4"> Cannot inject current</label>
+        <label><input type="radio" name="q4"> Cannot operate without a grid reference</label>
+        <label><input type="radio" name="q4"> Cannot operate with PLL</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. Why are GFLs widely used today?</p>
+        <label><input type="radio" name="q5"> They work in isolated microgrids</label>
+        <label><input type="radio" name="q5"> They are the only type of inverter</label>
+        <label><input type="radio" name="q5"> They integrate well with stable grid infrastructure</label>
+        <label><input type="radio" name="q5"> They replace transformers</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">← Back to Course</a>
+      <a href="lesson2.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

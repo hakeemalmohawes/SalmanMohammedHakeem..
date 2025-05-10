@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 5 - Grid-Forming Inverters</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 5: System Integration and Coordination of GFMs</h1>
+  </header>
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand how GFMs are integrated into power systems</li>
+      <li>Explore coordination between GFMs and other grid elements</li>
+      <li>Examine challenges in multi-inverter environments</li>
+    </ul>
+
+    <h2>1. Integration into Existing Systems</h2>
+    <p>GFMs can be integrated into both legacy grids with synchronous machines and inverter-based microgrids. Their ability to regulate voltage and frequency locally makes them flexible in deployment. Coordination, however, is crucial to avoid control conflicts.</p>
+
+    <h2>2. Coordinating with Other GFMs</h2>
+    <p>When multiple GFMs are deployed, they must coordinate power sharing and dynamic response. Droop-based and oscillator-based methods enable decentralized sharing of active and reactive power. Communication may be used for improved precision but is not required for basic functionality.</p>
+
+    <h2>3. GFM–GFL Interactions</h2>
+    <p>GFMs can coexist with GFL inverters in hybrid systems. GFMs establish the grid reference, while GFLs inject current based on that reference. It’s essential to tune control loops to prevent instabilities, especially under transient conditions.</p>
+
+    <h2>4. Load and Fault Dynamics</h2>
+    <p>GFMs must handle load fluctuations and fault events without loss of synchronism. This requires fast, stable control responses and sometimes supplemental services like inertia emulation and fault current limiting.</p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFMs are integrated with both legacy and modern grid elements</li>
+      <li>Coordination among GFMs ensures stability and power sharing</li>
+      <li>Hybrid GFM-GFL setups are common and require careful tuning</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+      <div class="quiz-question">
+        <p>1. What is required when integrating multiple GFMs?</p>
+        <label><input type="radio" name="q1"> High voltage insulation</label>
+        <label><input type="radio" name="q1"> Central frequency source</label>
+        <label><input type="radio" name="q1"> Power sharing coordination</label>
+        <label><input type="radio" name="q1"> Larger filters</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What enables decentralized sharing among GFMs?</p>
+        <label><input type="radio" name="q2"> Relay coordination</label>
+        <label><input type="radio" name="q2"> Droop and oscillator methods</label>
+        <label><input type="radio" name="q2"> Generator spin-ups</label>
+        <label><input type="radio" name="q2"> Battery dispatch signals</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. How do GFMs interact with GFLs?</p>
+        <label><input type="radio" name="q3"> GFMs follow GFL commands</label>
+        <label><input type="radio" name="q3"> GFMs provide voltage reference for GFLs</label>
+        <label><input type="radio" name="q3"> Both use identical control loops</label>
+        <label><input type="radio" name="q3"> GFLs set grid frequency</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What must GFMs withstand?</p>
+        <label><input type="radio" name="q4"> Long-term energy storage</label>
+        <label><input type="radio" name="q4"> Load variations and faults</label>
+        <label><input type="radio" name="q4"> Loss of solar input</label>
+        <label><input type="radio" name="q4"> Rain and humidity</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What does coordination improve?</p>
+        <label><input type="radio" name="q5"> Switchgear operation</label>
+        <label><input type="radio" name="q5"> Filter tuning</label>
+        <label><input type="radio" name="q5"> Stability and power sharing</label>
+        <label><input type="radio" name="q5"> Generator warmup time</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson4.html">← Previous Lesson</a>
+      <a href="lesson6.html">Next Lesson →</a>
+    </div>
+  </div>
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

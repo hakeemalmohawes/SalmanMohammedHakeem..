@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 7 - GFM</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 7: Comparison Between Grid-Forming and Grid-Following Inverters</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Compare the roles and behaviors of GFM and GFL inverters</li>
+      <li>Understand their respective advantages and limitations</li>
+      <li>Evaluate which inverter type fits specific system needs</li>
+    </ul>
+
+    <h2>⚖️ 1. Fundamental Differences</h2>
+    <p><strong>Grid-Forming Inverters (GFMs)</strong> generate voltage and frequency, acting as voltage sources. They provide essential system services such as black start, voltage regulation, and inertia. <strong>Grid-Following Inverters (GFLs)</strong> rely on an existing voltage waveform to synchronize and inject current. They act as current sources and depend on a grid-forming reference to operate.</p>
+
+    <h2>🌋 2. Control Approach</h2>
+    <ul>
+      <li><strong>GFMs:</strong> Control voltage and frequency through droop or virtual oscillator control</li>
+      <li><strong>GFLs:</strong> Use Phase-Locked Loop (PLL) to follow grid voltage and inject active/reactive power</li>
+    </ul>
+
+    <h2>🌐 3. Behavior During Disturbances</h2>
+    <p>GFMs maintain voltage and ride through faults, actively supporting the system. GFLs often disconnect during faults or rely on protection to avoid damage. This makes GFMs far more suitable for low-inertia, unstable, or microgrid applications.</p>
+
+    <h2>🌿 4. Application Scenarios</h2>
+    <ul>
+      <li><strong>GFMs:</strong> Used in microgrids, black start units, and weak-grid support</li>
+      <li><strong>GFLs:</strong> Common in large PV and wind farms where the grid is strong and stable</li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFMs are voltage sources; GFLs are current sources</li>
+      <li>GFMs form the grid; GFLs follow the grid</li>
+      <li>GFMs offer better dynamic support and grid services</li>
+      <li>GFLs are cost-effective and widely deployed in strong grids</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What do GFL inverters require to operate?</p>
+        <label><input type="radio" name="q1"> Voltage control algorithm</label>
+        <label><input type="radio" name="q1"> PLL and an existing grid voltage</label>
+        <label><input type="radio" name="q1"> High frequency injection</label>
+        <label><input type="radio" name="q1"> Black start control</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. Which inverter type can operate in islanded mode?</p>
+        <label><input type="radio" name="q2"> Grid-following</label>
+        <label><input type="radio" name="q2"> Grid-forming</label>
+        <label><input type="radio" name="q2"> Both types equally</label>
+        <label><input type="radio" name="q2"> None</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What happens to GFL inverters during faults?</p>
+        <label><input type="radio" name="q3"> They provide grid support</label>
+        <label><input type="radio" name="q3"> They switch to voltage source mode</label>
+        <label><input type="radio" name="q3"> They often disconnect</label>
+        <label><input type="radio" name="q3"> They begin black start</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. Which inverter type is more common in large PV installations?</p>
+        <label><input type="radio" name="q4"> GFM</label>
+        <label><input type="radio" name="q4"> GFL</label>
+        <label><input type="radio" name="q4"> Synchronous machines</label>
+        <label><input type="radio" name="q4"> Flywheel converters</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. Why are GFMs essential for microgrids?</p>
+        <label><input type="radio" name="q5"> They are cheaper</label>
+        <label><input type="radio" name="q5"> They follow frequency commands</label>
+        <label><input type="radio" name="q5"> They maintain voltage and frequency without the grid</label>
+        <label><input type="radio" name="q5"> They match generator impedance</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson6.html">← Previous Lesson</a>
+      <a href="lesson8.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

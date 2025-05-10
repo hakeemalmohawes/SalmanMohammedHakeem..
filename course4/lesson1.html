@@ -1,0 +1,115 @@
+<!-- File: course4/lesson1.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 1 - Course 4</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 1: Introduction to Analytical Modeling of High-Power Converters</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand the motivation for analytical modeling of high-power converters</li>
+      <li>Identify the key application areas in HVdc, FACTS, and wind power systems</li>
+      <li>Recognize the role of analytical models in control and stability studies</li>
+    </ul>
+
+    <h2>1. Why Analytical Modeling?</h2>
+    <p>High-power converters are essential in modern power systems, particularly in HVdc links, FACTS devices, and renewable energy integration. Analytical modeling allows engineers to design control systems, evaluate stability, and predict dynamic behavior with precision and efficiency.</p>
+
+    <h2>2. Key Applications</h2>
+    <ul>
+      <li><strong>HVdc (High Voltage Direct Current):</strong> Long-distance transmission of bulk power, requiring detailed converter modeling for control and protection.</li>
+      <li><strong>FACTS (Flexible AC Transmission Systems):</strong> Voltage, power flow, and stability control tools that rely on converter dynamics.</li>
+      <li><strong>Wind Energy Systems:</strong> Power electronic interfaces used for generator control and grid integration.</li>
+    </ul>
+
+    <h2>3. Role in System Studies</h2>
+    <p>Analytical models provide simplified yet accurate representations of complex systems. They are used in small-signal stability analysis, control design, system identification, and validation. These models help engineers ensure that large converter-based systems behave reliably under various grid conditions.</p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>Analytical modeling is essential for understanding high-power converter dynamics</li>
+      <li>Applications include HVdc, FACTS, and wind energy systems</li>
+      <li>Models are used for stability analysis, control design, and system planning</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What is a key benefit of analytical modeling?</p>
+        <label><input type="radio" name="q1"> Reduces energy losses</label>
+        <label><input type="radio" name="q1"> Enables accurate control and stability analysis</label>
+        <label><input type="radio" name="q1"> Eliminates transformers</label>
+        <label><input type="radio" name="q1"> Removes the need for converters</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. Where are high-power converters commonly used?</p>
+        <label><input type="radio" name="q2"> Light bulbs</label>
+        <label><input type="radio" name="q2"> Consumer electronics only</label>
+        <label><input type="radio" name="q2"> HVdc, FACTS, and wind power systems</label>
+        <label><input type="radio" name="q2"> Small household inverters</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What does HVdc stand for?</p>
+        <label><input type="radio" name="q3"> High Variable DC</label>
+        <label><input type="radio" name="q3"> High Voltage Direct Current</label>
+        <label><input type="radio" name="q3"> Hybrid Voltage Distribution Cable</label>
+        <label><input type="radio" name="q3"> Heat-Voltage Dissipation Control</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. Why are analytical models preferred in control design?</p>
+        <label><input type="radio" name="q4"> They are purely empirical</label>
+        <label><input type="radio" name="q4"> They are simple but inaccurate</label>
+        <label><input type="radio" name="q4"> They provide a structured and solvable approach</label>
+        <label><input type="radio" name="q4"> They replace hardware</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What kind of analysis do these models support?</p>
+        <label><input type="radio" name="q5"> Thermal modeling only</label>
+        <label><input type="radio" name="q5"> Small-signal stability and dynamic control</label>
+        <label><input type="radio" name="q5"> Financial forecasting</label>
+        <label><input type="radio" name="q5"> Audio signal processing</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">← Back to Course</a>
+      <a href="lesson2.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

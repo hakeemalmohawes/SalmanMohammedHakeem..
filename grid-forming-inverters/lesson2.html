@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 2 - Grid-Forming Inverters</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 2: Voltage and Frequency Regulation in Grid-Forming Inverters</h1>
+  </header>
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand how GFMs regulate voltage and frequency</li>
+      <li>Identify key control strategies for autonomous operation</li>
+      <li>Recognize the similarities and differences with synchronous machines</li>
+    </ul>
+
+    <h2>1. The Need for Local Control</h2>
+    <p>GFMs are designed to operate in systems where centralized control or strong interconnections are absent. They must regulate voltage magnitude and frequency locally, often based solely on their internal measurements and reference signals.</p>
+
+    <h2>2. Droop Control Mechanisms</h2>
+    <p>Much like synchronous generators, GFMs use frequency–power (P–f) and voltage–reactive power (Q–V) droop control to share load among multiple units. This ensures proportional power sharing and avoids conflict when several GFMs are operating in parallel.</p>
+
+    <h2>3. Frequency Regulation</h2>
+    <p>GFMs adjust their frequency output in response to changes in real power. A drop in frequency indicates more demand than generation, prompting the inverter to increase output. The inverse holds true during over-generation.</p>
+
+    <h2>4. Voltage Regulation</h2>
+    <p>Similarly, GFMs use reactive power measurements to maintain voltage levels. If voltage drops due to a reactive load, the GFM responds by supplying more reactive power, helping to keep the local voltage within acceptable limits.</p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFMs autonomously regulate voltage and frequency using droop control</li>
+      <li>They mimic synchronous machine behavior in inverter-dominated systems</li>
+      <li>These controls enable black-start, islanding, and proportional sharing</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+      <div class="quiz-question">
+        <p>1. What is droop control used for in GFMs?</p>
+        <label><input type="radio" name="q1"> Boost efficiency</label>
+        <label><input type="radio" name="q1"> Share load and stabilize voltage/frequency</label>
+        <label><input type="radio" name="q1"> Reduce harmonic distortion</label>
+        <label><input type="radio" name="q1"> Control switching devices</label>
+      </div>
+      <div class="quiz-question">
+        <p>2. What does a frequency drop indicate?</p>
+        <label><input type="radio" name="q2"> Generator surplus</label>
+        <label><input type="radio" name="q2"> Power deficit</label>
+        <label><input type="radio" name="q2"> Excessive voltage</label>
+        <label><input type="radio" name="q2"> Improved power factor</label>
+      </div>
+      <div class="quiz-question">
+        <p>3. How do GFMs maintain voltage?</p>
+        <label><input type="radio" name="q3"> Adjusting frequency</label>
+        <label><input type="radio" name="q3"> Changing DC link voltage</label>
+        <label><input type="radio" name="q3"> Controlling reactive power</label>
+        <label><input type="radio" name="q3"> Disabling inverters</label>
+      </div>
+      <div class="quiz-question">
+        <p>4. What behavior do GFMs emulate?</p>
+        <label><input type="radio" name="q4"> Capacitor banks</label>
+        <label><input type="radio" name="q4"> Diesel generators</label>
+        <label><input type="radio" name="q4"> Synchronous machines</label>
+        <label><input type="radio" name="q4"> Phase angle trackers</label>
+      </div>
+      <div class="quiz-question">
+        <p>5. What is required for GFMs to operate autonomously?</p>
+        <label><input type="radio" name="q5"> Remote dispatch</label>
+        <label><input type="radio" name="q5"> Internal measurement and reference</label>
+        <label><input type="radio" name="q5"> External frequency injection</label>
+        <label><input type="radio" name="q5"> Backup generator support</label>
+      </div>
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson1.html">← Previous Lesson</a>
+      <a href="lesson3.html">Next Lesson →</a>
+    </div>
+  </div>
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

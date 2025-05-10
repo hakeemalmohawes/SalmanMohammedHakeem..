@@ -1,0 +1,121 @@
+<!-- File: course4/lesson8.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 8 - Course 4</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 8: Stability Assessment of Converter-Dominated Systems</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand the challenges of stability in converter-heavy grids</li>
+      <li>Learn analytical techniques for small-signal and impedance-based stability</li>
+      <li>Explore methods to ensure robust operation under variable conditions</li>
+    </ul>
+
+    <h2>1. Importance of Stability Analysis</h2>
+    <p>As converter-based generation grows, traditional assumptions about inertia and damping no longer apply. Analytical tools help ensure stability in scenarios with low short-circuit ratios and multiple interacting controllers.</p>
+
+    <h2>2. Stability Assessment Techniques</h2>
+    <ul>
+      <li><strong>Eigenvalue analysis:</strong> From small-signal models to evaluate oscillatory modes</li>
+      <li><strong>Impedance ratio method:</strong> Using source/load impedance to assess robustness</li>
+      <li><strong>Bode and Nyquist plots:</strong> Identify gain and phase margins for safe operation</li>
+    </ul>
+
+    <h2>3. Enhancing System Robustness</h2>
+    <p>Stability is improved by:
+      <ul>
+        <li>Tuning control parameters to avoid resonances</li>
+        <li>Using virtual inertia or damping controls</li>
+        <li>Maintaining strong anchor points (e.g., GFM inverters or synchronous machines)</li>
+      </ul>
+    </p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>Stability is a key concern in grids dominated by power converters</li>
+      <li>Analytical tools like eigenvalue and impedance analysis are widely used</li>
+      <li>Control tuning and hybrid architectures improve system resilience</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. Why is stability analysis critical in converter-based systems?</p>
+        <label><input type="radio" name="q1"> Because of increased rotating mass</label>
+        <label><input type="radio" name="q1"> Because of low system inertia and controller interaction</label>
+        <label><input type="radio" name="q1"> Due to transformer core saturation</label>
+        <label><input type="radio" name="q1"> For harmonic balancing</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What does eigenvalue analysis help identify?</p>
+        <label><input type="radio" name="q2"> Filter resonance</label>
+        <label><input type="radio" name="q2"> Thermal limits</label>
+        <label><input type="radio" name="q2"> Oscillatory system modes</label>
+        <label><input type="radio" name="q2"> Ground faults</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What does the impedance ratio method evaluate?</p>
+        <label><input type="radio" name="q3"> Noise immunity</label>
+        <label><input type="radio" name="q3"> Voltage levels</label>
+        <label><input type="radio" name="q3"> Stability margin via source/load impedance</label>
+        <label><input type="radio" name="q3"> Load forecast</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What helps improve stability in converter-based systems?</p>
+        <label><input type="radio" name="q4"> Higher switching frequency only</label>
+        <label><input type="radio" name="q4"> Virtual inertia and damping control</label>
+        <label><input type="radio" name="q4"> Delayed feedback loops</label>
+        <label><input type="radio" name="q4"> Isolated grounding</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. Which plots are commonly used in frequency-domain stability analysis?</p>
+        <label><input type="radio" name="q5"> Laplace curves</label>
+        <label><input type="radio" name="q5"> FFT snapshots</label>
+        <label><input type="radio" name="q5"> Bode and Nyquist plots</label>
+        <label><input type="radio" name="q5"> Noise power ratios</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson7.html">← Previous Lesson</a>
+      <a href="lesson9.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

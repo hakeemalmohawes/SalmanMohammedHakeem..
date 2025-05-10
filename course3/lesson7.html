@@ -1,0 +1,115 @@
+<!-- File: course3/lesson7.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 7 - Course 3</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 7: Impact of Duality on Grid Code Compliance and Standards</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand how the duality framework affects grid code interpretation</li>
+      <li>Explore inverter design considerations for compliance</li>
+      <li>Recognize emerging standards for GFM and GFL behavior</li>
+    </ul>
+
+    <h2>1. Grid Code Evolution</h2>
+    <p>Traditional grid codes were built around synchronous machines. As inverter-based resources grow, codes are evolving to address fast-acting, programmable sources. Grid-forming and grid-following inverters must now meet new standards for fault ride-through, voltage support, and frequency regulation.</p>
+
+    <h2>2. Duality and Compliance</h2>
+    <p>Duality clarifies how GFM and GFL inverters must be modeled and tested. GFM units must prove autonomous voltage/frequency control under disturbance, while GFL units must show stability under weak-grid and high-harmonic scenarios.</p>
+
+    <h2>3. Emerging Standards</h2>
+    <ul>
+      <li><strong>IEEE 2800:</strong> Specifies performance for inverter-based resources on transmission networks</li>
+      <li><strong>Grid-forming requirements:</strong> Defined control response under fault, reconnection, and islanding</li>
+      <li><strong>Validation:</strong> Includes HIL (Hardware-in-the-loop) and model-based testing</li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>Grid codes are adapting to inverter-based technologies</li>
+      <li>GFM and GFL units must meet distinct but complementary performance criteria</li>
+      <li>Standards like IEEE 2800 provide unified expectations for compliance</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. Why are grid codes evolving?</p>
+        <label><input type="radio" name="q1"> To eliminate renewables</label>
+        <label><input type="radio" name="q1"> To accommodate inverter-based systems</label>
+        <label><input type="radio" name="q1"> To simplify fossil fuel integration</label>
+        <label><input type="radio" name="q1"> To mandate cable lengths</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What must GFM inverters demonstrate?</p>
+        <label><input type="radio" name="q2"> Precise PLL tracking</label>
+        <label><input type="radio" name="q2"> Voltage/frequency support during faults</label>
+        <label><input type="radio" name="q2"> Resistance-only control</label>
+        <label><input type="radio" name="q2"> Ability to disconnect quickly</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What scenario is most challenging for GFL inverters?</p>
+        <label><input type="radio" name="q3"> High-inertia grids</label>
+        <label><input type="radio" name="q3"> Weak grids with high harmonics</label>
+        <label><input type="radio" name="q3"> Islands with large motors</label>
+        <label><input type="radio" name="q3"> Direct current isolation</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What is the purpose of IEEE 2800?</p>
+        <label><input type="radio" name="q4"> Increase taxes on solar</label>
+        <label><input type="radio" name="q4"> Define performance for inverter-based resources</label>
+        <label><input type="radio" name="q4"> Reduce grid interconnections</label>
+        <label><input type="radio" name="q4"> Mandate fossil backup</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What testing method is used to validate inverter compliance?</p>
+        <label><input type="radio" name="q5"> Spreadsheet simulation</label>
+        <label><input type="radio" name="q5"> Circuit breakers</label>
+        <label><input type="radio" name="q5"> Hardware-in-the-loop (HIL)</label>
+        <label><input type="radio" name="q5"> Thermal chambers</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson6.html">← Previous Lesson</a>
+      <a href="lesson8.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

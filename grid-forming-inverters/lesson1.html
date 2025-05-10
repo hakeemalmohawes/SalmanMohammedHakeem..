@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 1 - Grid-Forming Inverters</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 1: Introduction to Grid-Forming Inverters and the Need for Change</h1>
+  </header>
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand what grid-forming inverters are and how they differ from conventional approaches</li>
+      <li>Explore the reasons why the power system needs to transition toward grid-forming control</li>
+      <li>Identify the fundamental shift from synchronous machines to inverter-based resources</li>
+    </ul>
+
+    <h2>1. What Are Grid-Forming Inverters?</h2>
+    <p>Grid-forming inverters (GFMs) are power electronic devices that can establish and regulate voltage and frequency within a power system. Unlike conventional inverters, which simply follow the grid, GFMs can set the voltage reference themselves, enabling them to operate independently or coordinate with other sources.</p>
+
+    <h2>2. Motivation for Grid-Forming Control</h2>
+    <p>As power systems transition to renewable energy, the share of synchronous machines is declining. These machines historically provided inertia, frequency stability, and voltage regulation. GFMs are proposed as substitutes for these critical services, especially in inverter-dominated grids where traditional mechanisms are inadequate.</p>
+
+    <h2>3. Decline of Synchronous Machines</h2>
+    <p>With the growing penetration of solar, wind, and storage systems, most new generation is interfaced via power electronics. These systems, if operated in a grid-following mode, cannot inherently provide frequency or voltage control. This makes the system vulnerable unless alternative approaches like GFMs are adopted.</p>
+
+    <h2>4. System Reliability and Stability Concerns</h2>
+    <p>Grid-following inverters rely on an existing voltage reference, which becomes unreliable or unavailable during disturbances. Grid-forming inverters, by contrast, can maintain voltage and frequency even in the absence of other sources, contributing to black-start capabilities, islanded operation, and overall system resilience.</p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>Grid-forming inverters can establish voltage and frequency references</li>
+      <li>They are essential for future grids with high renewable penetration</li>
+      <li>They fill the gap left by retiring synchronous generators</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+      <div class="quiz-question">
+        <p>1. What is a primary feature of a grid-forming inverter?</p>
+        <label><input type="radio" name="q1"> It follows existing grid voltage</label>
+        <label><input type="radio" name="q1"> It can set voltage and frequency references</label>
+        <label><input type="radio" name="q1"> It only operates with diesel generators</label>
+        <label><input type="radio" name="q1"> It converts DC to high-voltage AC</label>
+      </div>
+      <div class="quiz-question">
+        <p>2. Why are synchronous machines declining in modern grids?</p>
+        <label><input type="radio" name="q2"> Due to low efficiency</label>
+        <label><input type="radio" name="q2"> Due to increased renewable energy use</label>
+        <label><input type="radio" name="q2"> Due to transformer failures</label>
+        <label><input type="radio" name="q2"> Due to excessive harmonics</label>
+      </div>
+      <div class="quiz-question">
+        <p>3. What is a major risk of relying on grid-following inverters?</p>
+        <label><input type="radio" name="q3"> Excessive reactive power</label>
+        <label><input type="radio" name="q3"> Inability to maintain frequency during faults</label>
+        <label><input type="radio" name="q3"> Too much inertia</label>
+        <label><input type="radio" name="q3"> Islanding control</label>
+      </div>
+      <div class="quiz-question">
+        <p>4. Which application benefits from grid-forming inverters?</p>
+        <label><input type="radio" name="q4"> Load shedding</label>
+        <label><input type="radio" name="q4"> Black-start operation</label>
+        <label><input type="radio" name="q4"> Harmonic suppression</label>
+        <label><input type="radio" name="q4"> Power factor correction</label>
+      </div>
+      <div class="quiz-question">
+        <p>5. What makes GFMs suitable for renewable-based grids?</p>
+        <label><input type="radio" name="q5"> Their cost advantage</label>
+        <label><input type="radio" name="q5"> Their ability to regulate voltage/frequency</label>
+        <label><input type="radio" name="q5"> Their connection to batteries</label>
+        <label><input type="radio" name="q5"> Their low bandwidth control</label>
+      </div>
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">← Back to Course</a>
+      <a href="lesson2.html">Next Lesson →</a>
+    </div>
+  </div>
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

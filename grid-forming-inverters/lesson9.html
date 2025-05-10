@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 9 - Grid-Forming Inverters</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 9: Challenges and Limitations of Grid-Forming Inverters</h1>
+  </header>
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Identify key challenges in deploying GFMs</li>
+      <li>Understand technical and operational limitations</li>
+      <li>Explore trade-offs between stability, scalability, and cost</li>
+    </ul>
+
+    <h2>1. Control Complexity</h2>
+    <p>Implementing droop, VSM, or oscillator-based controls requires precise tuning and understanding of system dynamics. Improper configuration may lead to instability, poor power sharing, or harmonic distortion.</p>
+
+    <h2>2. Lack of Standardization</h2>
+    <p>Unlike synchronous generators, there are no universal standards or widely adopted grid codes for GFMs. This creates inconsistency in design, testing, and interoperability across vendors and utilities.</p>
+
+    <h2>3. Cost and Converter Design</h2>
+    <p>GFMs typically require high-performance converters, fast digital controllers, and robust protection schemes. These increase system cost compared to simpler GFL inverters. Thermal management and EMI filtering can also add complexity.</p>
+
+    <h2>4. Grid Integration Risk</h2>
+    <p>In multi-inverter systems, interactions between GFMs and GFLs can result in resonances or transient instability. Careful modeling, validation, and control design are necessary to avoid issues during high renewable penetration or islanded operation.</p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFMs face control, cost, and interoperability challenges</li>
+      <li>They require high-quality hardware and precise tuning</li>
+      <li>Proper modeling and standards are essential for safe deployment</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What can happen with poorly tuned GFM controls?</p>
+        <label><input type="radio" name="q1"> Higher fuel consumption</label>
+        <label><input type="radio" name="q1"> Instability and distortion</label>
+        <label><input type="radio" name="q1"> Reduced inverter lifespan</label>
+        <label><input type="radio" name="q1"> Improved PLL lock</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. Why is standardization important for GFMs?</p>
+        <label><input type="radio" name="q2"> Reduces cable cost</label>
+        <label><input type="radio" name="q2"> Enables vendor interoperability</label>
+        <label><input type="radio" name="q2"> Increases switching frequency</label>
+        <label><input type="radio" name="q2"> Improves battery life</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What adds to the cost of GFMs?</p>
+        <label><input type="radio" name="q3"> Longer warranties</label>
+        <label><input type="radio" name="q3"> Simpler filters</label>
+        <label><input type="radio" name="q3"> High-performance converters</label>
+        <label><input type="radio" name="q3"> Mechanical cooling</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What is a risk in GFM–GFL interaction?</p>
+        <label><input type="radio" name="q4"> Low harmonic distortion</label>
+        <label><input type="radio" name="q4"> Communication delay</label>
+        <label><input type="radio" name="q4"> Resonance and instability</label>
+        <label><input type="radio" name="q4"> High short-circuit ratio</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What is required for safe GFM deployment?</p>
+        <label><input type="radio" name="q5"> Cost minimization only</label>
+        <label><input type="radio" name="q5"> Strong transformers</label>
+        <label><input type="radio" name="q5"> Accurate modeling and standards</label>
+        <label><input type="radio" name="q5"> Overhead lines only</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson8.html">← Previous Lesson</a>
+      <a href="lesson10.html">Next Lesson →</a>
+    </div>
+  </div>
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

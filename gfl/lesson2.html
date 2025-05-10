@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 2 - GFL</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 2: Synchronization and the Role of PLLs</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand how Grid-Following Inverters synchronize with the grid</li>
+      <li>Explore the function and importance of the Phase-Locked Loop (PLL)</li>
+      <li>Recognize limitations and sensitivity of PLLs in weak grid conditions</li>
+    </ul>
+
+    <h2>🌐 1. The Need for Synchronization</h2>
+    <p>For a Grid-Following Inverter to inject current into the grid, it must first align itself with the grid’s voltage waveform. This includes matching the phase, frequency, and magnitude. Synchronization ensures safe and efficient operation, preventing damage or instability.</p>
+
+    <h2>🪡 2. What Is a Phase-Locked Loop (PLL)?</h2>
+    <p>The <strong>Phase-Locked Loop (PLL)</strong> is the core component used by GFL inverters to stay synchronized with the grid. It continuously monitors the grid voltage and adjusts the inverter’s output to lock onto the phase angle and frequency. If the grid frequency changes, the PLL tracks it and ensures the inverter stays in phase.</p>
+
+    <h2>🚀 3. How the PLL Works</h2>
+    <ul>
+      <li>The inverter measures grid voltage (typically via abc-dq transformation)</li>
+      <li>The PLL detects the phase difference between grid voltage and the inverter reference</li>
+      <li>The error signal is passed through a PI controller to adjust the inverter phase</li>
+      <li>Eventually, the inverter’s phase and frequency match the grid</li>
+    </ul>
+
+    <h2>⚡ 4. PLL Sensitivity and Weak Grids</h2>
+    <p>In weak or distorted grids, the PLL may become unstable or inaccurate. Harmonics, voltage sags, or frequency swings can confuse the PLL, causing incorrect synchronization. This is a major reason GFL inverters struggle in systems with low inertia or poor power quality.</p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFL inverters use PLLs to match the phase and frequency of the grid</li>
+      <li>Accurate synchronization is essential for current injection and stability</li>
+      <li>PLLs can be sensitive in weak or faulted grid conditions</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. Why do GFL inverters need synchronization?</p>
+        <label><input type="radio" name="q1"> To control transformer tap settings</label>
+        <label><input type="radio" name="q1"> To safely inject current into the grid</label>
+        <label><input type="radio" name="q1"> To measure battery temperature</label>
+        <label><input type="radio" name="q1"> To reduce harmonics</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What component is used for synchronization in GFL inverters?</p>
+        <label><input type="radio" name="q2"> Voltage regulator</label>
+        <label><input type="radio" name="q2"> PLL</label>
+        <label><input type="radio" name="q2"> Synchronverter</label>
+        <label><input type="radio" name="q2"> Circuit breaker</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What does the PI controller do inside a PLL?</p>
+        <label><input type="radio" name="q3"> Measures voltage harmonics</label>
+        <label><input type="radio" name="q3"> Adjusts inverter current gain</label>
+        <label><input type="radio" name="q3"> Compensates for phase error</label>
+        <label><input type="radio" name="q3"> Generates PWM signals</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What can cause PLL instability?</p>
+        <label><input type="radio" name="q4"> Strong synchronous machines</label>
+        <label><input type="radio" name="q4"> Clean sinusoidal voltage</label>
+        <label><input type="radio" name="q4"> Voltage sags and harmonics</label>
+        <label><input type="radio" name="q4"> Proper grounding</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What transformation is commonly used to extract phase angle?</p>
+        <label><input type="radio" name="q5"> abc-to-zxy</label>
+        <label><input type="radio" name="q5"> abc-to-dq</label>
+        <label><input type="radio" name="q5"> dq-to-ab</label>
+        <label><input type="radio" name="q5"> d-to-q</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson1.html">← Previous Lesson</a>
+      <a href="lesson3.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

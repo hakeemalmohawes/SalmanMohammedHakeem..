@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 1 - GFM</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 1: Introduction to Grid-Forming Inverters (GFMs) and the Need for Change</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Define what Grid-Forming Inverters (GFMs) are</li>
+      <li>Understand the limitations of traditional synchronous machines in renewable energy environments</li>
+      <li>Recognize the motivation for grid-forming control in inverter-based systems</li>
+    </ul>
+
+    <h2>⚖️ The Role of Inverters in the Energy Transition</h2>
+    <p>Modern electric power systems are rapidly transitioning from centralized, fossil-fuel-based generation to decentralized renewable energy sources like solar PV and wind. These new sources are interfaced to the grid through power electronic inverters. Most inverters deployed today are <strong>Grid-Following (GFL)</strong> — they inject current based on a grid voltage reference and do not contribute to frequency or voltage regulation.</p>
+    <p>However, as the penetration of inverter-based resources increases, especially in regions with retiring synchronous generators, the grid faces significant challenges in maintaining stability, reliability, and resilience. The decline in rotational inertia and grid-forming capabilities provided by synchronous machines has created a critical need for a new generation of inverters that can go beyond just following the grid.</p>
+
+    <h2>🔧 Enter Grid-Forming Inverters</h2>
+    <p><strong>Grid-Forming Inverters (GFMs)</strong> are designed to <em>establish</em> grid voltage and frequency, rather than simply following them. They act as voltage sources and are capable of operating independently or in coordination with other GFMs. These inverters can provide synthetic inertia, autonomous voltage and frequency regulation, black-start capability, and support for islanded or weak-grid operation.</p>
+
+    <h2>⚡ Limitations of Synchronous Machines in Modern Grids</h2>
+    <ul>
+      <li>Large rotating mass leads to slow response times</li>
+      <li>Operational constraints in terms of ramp rate, efficiency, and cost</li>
+      <li>Dependence on fossil fuels or nuclear sources</li>
+      <li>Inability to scale easily to distributed and renewable sources</li>
+    </ul>
+
+    <h2>🚀 The Case for Grid-Forming Control</h2>
+    <p>Grid-forming control allows inverter-based resources to emulate many of the critical properties of traditional generators, enabling:</p>
+    <ul>
+      <li>Stable operation in islanded, weak, or low-inertia systems</li>
+      <li>Improved dynamic performance and fault ride-through</li>
+      <li>Renewable-only or inverter-dominated grid architectures</li>
+    </ul>
+    <p>This paradigm shift from grid-following to grid-forming control is not just technical — it is foundational to enabling high-renewable, low-carbon, resilient power systems of the future.</p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>Traditional synchronous machines are phasing out, creating a control and stability gap in the grid</li>
+      <li>Grid-Forming Inverters are voltage-controlled devices that establish and maintain grid conditions</li>
+      <li>They are essential to the next generation of renewable-powered grids</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What do most inverters deployed today primarily do?</p>
+        <label><input type="radio" name="q1"> Form voltage and frequency independently</label>
+        <label><input type="radio" name="q1"> Follow existing grid voltage and inject current</label>
+        <label><input type="radio" name="q1"> Control mechanical turbines</label>
+        <label><input type="radio" name="q1"> Operate in isolated microgrids only</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What is a key function of a Grid-Forming Inverter?</p>
+        <label><input type="radio" name="q2"> It synchronizes with a diesel generator</label>
+        <label><input type="radio" name="q2"> It follows PLL-based frequency control</label>
+        <label><input type="radio" name="q2"> It regulates voltage and frequency autonomously</label>
+        <label><input type="radio" name="q2"> It requires an external grid voltage to operate</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. Why are synchronous machines becoming less common?</p>
+        <label><input type="radio" name="q3"> They're too fast</label>
+        <label><input type="radio" name="q3"> They're efficient but expensive</label>
+        <label><input type="radio" name="q3"> They rely on fossil fuels and lack flexibility</label>
+        <label><input type="radio" name="q3"> They operate best with solar PV only</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What problem arises with high renewable penetration?</p>
+        <label><input type="radio" name="q4"> Too much inertia</label>
+        <label><input type="radio" name="q4"> Loss of grid-forming capability and system inertia</label>
+        <label><input type="radio" name="q4"> Overuse of batteries</label>
+        <label><input type="radio" name="q4"> Excessive spinning reserve</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. Grid-Forming Inverters are essential because they:</p>
+        <label><input type="radio" name="q5"> Decrease voltage drops at transformers</label>
+        <label><input type="radio" name="q5"> Emulate key functions of synchronous generators in inverter-based systems</label>
+        <label><input type="radio" name="q5"> Charge electric vehicles directly</label>
+        <label><input type="radio" name="q5"> Operate only with fossil fuel generators</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">← Back to Course</a>
+      <a href="lesson2.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!-- File: course4/lesson10.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 10 - Course 4</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 10: Future Directions in Converter Modeling and Control</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Review the progress in analytical modeling of power converters</li>
+      <li>Identify emerging trends in converter control and integration</li>
+      <li>Explore future challenges in high-power system design</li>
+    </ul>
+
+    <h2>1. Recap of Analytical Modeling Techniques</h2>
+    <p>Throughout this course, we covered state-space modeling, impedance methods, linearization, filter design, and stability analysis. These tools are foundational for understanding and controlling modern power converter systems.</p>
+
+    <h2>2. Emerging Trends</h2>
+    <ul>
+      <li><strong>Grid-forming controls:</strong> Replacing synchronous machines with software-based grid support</li>
+      <li><strong>Adaptive and AI-based control:</strong> Enhancing robustness and adaptability</li>
+      <li><strong>Digital twins and HIL testing:</strong> Merging real-time simulation with physical control systems</li>
+    </ul>
+
+    <h2>3. Future Challenges</h2>
+    <p>As grids become increasingly inverter-dominated, key challenges include:</p>
+    <ul>
+      <li>Ensuring interoperability between devices and vendors</li>
+      <li>Maintaining stability under low inertia and fast dynamics</li>
+      <li>Scaling control strategies for distributed energy systems</li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>Analytical modeling is critical for modern converter design and operation</li>
+      <li>New technologies are reshaping converter roles and requirements</li>
+      <li>Future systems demand advanced control, coordination, and validation</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What is a key goal of grid-forming control?</p>
+        <label><input type="radio" name="q1"> Track current signals only</label>
+        <label><input type="radio" name="q1"> Replace transformers</label>
+        <label><input type="radio" name="q1"> Emulate synchronous machine behavior</label>
+        <label><input type="radio" name="q1"> Increase voltage drop</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What are digital twins used for?</p>
+        <label><input type="radio" name="q2"> Data backup</label>
+        <label><input type="radio" name="q2"> Thermal profiling</label>
+        <label><input type="radio" name="q2"> Real-time simulation and validation</label>
+        <label><input type="radio" name="q2"> Improving internet speed</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What future challenge does low system inertia cause?</p>
+        <label><input type="radio" name="q3"> Lower emissions</label>
+        <label><input type="radio" name="q3"> Easier scheduling</label>
+        <label><input type="radio" name="q3"> Greater sensitivity to disturbances</label>
+        <label><input type="radio" name="q3"> Better harmonic immunity</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. Which control method is expected to grow in importance?</p>
+        <label><input type="radio" name="q4"> Manual relay control</label>
+        <label><input type="radio" name="q4"> AI and adaptive control</label>
+        <label><input type="radio" name="q4"> Heat-based feedback</label>
+        <label><input type="radio" name="q4"> Static voltage control only</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What is a major system-level concern for future converter grids?</p>
+        <label><input type="radio" name="q5"> Physical layout constraints</label>
+        <label><input type="radio" name="q5"> Fuel diversity</label>
+        <label><input type="radio" name="q5"> Device interoperability and control scalability</label>
+        <label><input type="radio" name="q5"> Transformer core saturation</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson9.html">← Previous Lesson</a>
+      <a href="index.html">Back to Course Index →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

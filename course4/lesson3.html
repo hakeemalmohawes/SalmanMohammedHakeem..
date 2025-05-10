@@ -1,0 +1,124 @@
+<!-- File: course4/lesson3.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 3 - Course 4</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 3: State-Space Modeling of Power Converters</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand the concept and purpose of state-space modeling</li>
+      <li>Learn how to derive state-space equations for converter systems</li>
+      <li>Explore how state-space models are used in control design</li>
+    </ul>
+
+    <h2>1. What is State-Space Modeling?</h2>
+    <p>State-space modeling represents a system using a set of first-order differential equations. This approach is especially useful in control theory, as it allows for time-domain simulation and analysis of multi-variable systems like power converters.</p>
+
+    <h2>2. Typical State Variables</h2>
+    <ul>
+      <li>Inductor current (i<sub>L</sub>)</li>
+      <li>Capacitor voltage (v<sub>C</sub>)</li>
+      <li>Switch position (as discrete control inputs)</li>
+    </ul>
+    <p>By choosing appropriate state variables, a converter's dynamic behavior can be expressed in matrix form as:  
+    <code>dx/dt = Ax + Bu</code>  
+    <code>y = Cx + Du</code></p>
+
+    <h2>3. Applications in Converter Systems</h2>
+    <p>State-space models allow for:
+      <ul>
+        <li>Linear control system design (e.g., pole placement, LQR)</li>
+        <li>Stability and controllability analysis</li>
+        <li>Simulation of system behavior under varying conditions</li>
+      </ul>
+    </p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>State-space modeling is powerful for dynamic system analysis</li>
+      <li>It is based on differential equations and system matrices (A, B, C, D)</li>
+      <li>Useful for both simulation and control design of high-power converters</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What is the main purpose of state-space modeling?</p>
+        <label><input type="radio" name="q1"> Analyze thermal profiles</label>
+        <label><input type="radio" name="q1"> Represent system dynamics with differential equations</label>
+        <label><input type="radio" name="q1"> Calculate material costs</label>
+        <label><input type="radio" name="q1"> Design housing enclosures</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. Which of these is commonly a state variable?</p>
+        <label><input type="radio" name="q2"> Resistor wattage</label>
+        <label><input type="radio" name="q2"> Inductor current</label>
+        <label><input type="radio" name="q2"> Fan speed</label>
+        <label><input type="radio" name="q2"> Ambient humidity</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What does the matrix A in state-space models represent?</p>
+        <label><input type="radio" name="q3"> System noise</label>
+        <label><input type="radio" name="q3"> Control inputs</label>
+        <label><input type="radio" name="q3"> Internal dynamics between state variables</label>
+        <label><input type="radio" name="q3"> Output scaling</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What control design technique uses state-space models?</p>
+        <label><input type="radio" name="q4"> Overcurrent tripping</label>
+        <label><input type="radio" name="q4"> Pole placement</label>
+        <label><input type="radio" name="q4"> Thermal mapping</label>
+        <label><input type="radio" name="q4"> Frequency folding</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What type of analysis is state-space modeling especially good for?</p>
+        <label><input type="radio" name="q5"> Mechanical stress testing</label>
+        <label><input type="radio" name="q5"> Real-time harmonic balancing</label>
+        <label><input type="radio" name="q5"> Multi-variable dynamic systems</label>
+        <label><input type="radio" name="q5"> Solder fatigue estimation</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson2.html">← Previous Lesson</a>
+      <a href="lesson4.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

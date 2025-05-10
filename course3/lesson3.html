@@ -1,0 +1,115 @@
+<!-- File: course3/lesson3.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 3 - Course 3</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 3: Synchronization Mechanisms in GFM and GFL Inverters</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand how GFM and GFL inverters achieve synchronization</li>
+      <li>Explore the role of droop control, virtual oscillators, and PLLs</li>
+      <li>Compare stability and robustness of different synchronization strategies</li>
+    </ul>
+
+    <h2>1. GFM Synchronization Approaches</h2>
+    <p>Grid-Forming inverters do not rely on the external grid for synchronization. Instead, they generate their own voltage and frequency reference, often through droop control or virtual oscillator control (VOC). These methods allow them to autonomously synchronize and provide system stability.</p>
+
+    <h2>2. GFL Synchronization Using PLLs</h2>
+    <p>Grid-Following inverters synchronize using a Phase-Locked Loop (PLL). The PLL estimates the phase angle of the grid voltage and adjusts the inverter output accordingly. However, PLLs can become unstable under weak-grid or low-inertia conditions.</p>
+
+    <h2>3. Comparison of Techniques</h2>
+    <ul>
+      <li><strong>Droop Control:</strong> Mimics governor response; smooth and scalable</li>
+      <li><strong>Virtual Oscillator Control:</strong> Nonlinear method with fast dynamic response</li>
+      <li><strong>PLL:</strong> Linear, widely used, but sensitive to grid disturbances</li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFM inverters set frequency; GFL inverters track it</li>
+      <li>Droop and VOC offer autonomous, grid-independent operation</li>
+      <li>PLL is effective but may pose risks in weak grids</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What method do GFL inverters use to synchronize?</p>
+        <label><input type="radio" name="q1"> Droop control</label>
+        <label><input type="radio" name="q1"> Virtual oscillator</label>
+        <label><input type="radio" name="q1"> Phase-Locked Loop (PLL)</label>
+        <label><input type="radio" name="q1"> Battery balancing</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. Which control method is unique to GFM inverters?</p>
+        <label><input type="radio" name="q2"> PLL</label>
+        <label><input type="radio" name="q2"> Droop control</label>
+        <label><input type="radio" name="q2"> Synchronous condensers</label>
+        <label><input type="radio" name="q2"> Harmonic injection</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What is a limitation of PLL-based synchronization?</p>
+        <label><input type="radio" name="q3"> Too much reactive power</label>
+        <label><input type="radio" name="q3"> It works offline only</label>
+        <label><input type="radio" name="q3"> It can be unstable in weak grids</label>
+        <label><input type="radio" name="q3"> It requires high inertia</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What is the purpose of VOC in GFM control?</p>
+        <label><input type="radio" name="q4"> Reduce battery charging</label>
+        <label><input type="radio" name="q4"> Provide nonlinear, stable synchronization</label>
+        <label><input type="radio" name="q4"> Enhance capacitor voltage</label>
+        <label><input type="radio" name="q4"> Improve PLL tracking</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. Which inverter type relies on an internal reference?</p>
+        <label><input type="radio" name="q5"> GFL inverter</label>
+        <label><input type="radio" name="q5"> GFM inverter</label>
+        <label><input type="radio" name="q5"> Rectifier</label>
+        <label><input type="radio" name="q5"> Thyristor</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson2.html">← Previous Lesson</a>
+      <a href="lesson4.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

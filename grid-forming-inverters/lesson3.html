@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 3 - Grid-Forming Inverters</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 3: Characteristics and Control Objectives of Grid-Forming Inverters</h1>
+  </header>
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand the defining characteristics of grid-forming inverters (GFMs)</li>
+      <li>Explore their key control objectives in modern power systems</li>
+      <li>Compare GFMs with conventional grid-following inverters</li>
+    </ul>
+
+    <h2>1. Key Characteristics of GFMs</h2>
+    <ul>
+      <li><strong>Voltage Source Behavior:</strong> GFMs regulate their terminal voltage directly</li>
+      <li><strong>Autonomous Operation:</strong> Capable of operating without grid support</li>
+      <li><strong>Synchronization-Free:</strong> No PLL required for phase-locking</li>
+      <li><strong>Inertia Emulation:</strong> Some implementations mimic the inertia of synchronous machines</li>
+    </ul>
+
+    <h2>2. Main Control Objectives</h2>
+    <ul>
+      <li><strong>Voltage Regulation:</strong> Maintain voltage amplitude and waveform integrity</li>
+      <li><strong>Frequency Regulation:</strong> Adjust frequency based on power imbalances</li>
+      <li><strong>Power Sharing:</strong> Share load among multiple GFMs using droop characteristics</li>
+      <li><strong>Fault Support:</strong> Remain connected and stable during disturbances</li>
+    </ul>
+
+    <h2>3. Comparison with Grid-Following Inverters</h2>
+    <ul>
+      <li>GFLs inject current based on sensed voltage, requiring a strong grid</li>
+      <li>GFMs set voltage and provide stability even in weak or isolated grids</li>
+      <li>GFMs support black-start and microgrid formation, GFLs do not</li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFMs are voltage-regulating, autonomous, and synchronization-free</li>
+      <li>Their control targets include voltage/frequency regulation, stability, and sharing</li>
+      <li>They play a critical role in renewable-dominated and islanded power systems</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What is a primary characteristic of a GFM inverter?</p>
+        <label><input type="radio" name="q1"> Current control based on PLL</label>
+        <label><input type="radio" name="q1"> Voltage source with autonomous regulation</label>
+        <label><input type="radio" name="q1"> Diesel backup mode</label>
+        <label><input type="radio" name="q1"> Relay-based power tracking</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What is NOT a control objective of GFMs?</p>
+        <label><input type="radio" name="q2"> Voltage regulation</label>
+        <label><input type="radio" name="q2"> Frequency support</label>
+        <label><input type="radio" name="q2"> Inertia emulation</label>
+        <label><input type="radio" name="q2"> External PLL synchronization</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. Which inverter type supports black-start?</p>
+        <label><input type="radio" name="q3"> GFM</label>
+        <label><input type="radio" name="q3"> GFL</label>
+        <label><input type="radio" name="q3"> PWM-based only</label>
+        <label><input type="radio" name="q3"> Phase-tracking capacitors</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. How do GFMs share load?</p>
+        <label><input type="radio" name="q4"> Central dispatch</label>
+        <label><input type="radio" name="q4"> Random scheduling</label>
+        <label><input type="radio" name="q4"> Droop control</label>
+        <label><input type="radio" name="q4"> Direct coupling</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What makes GFMs suitable for microgrids?</p>
+        <label><input type="radio" name="q5"> Relay switching</label>
+        <label><input type="radio" name="q5"> Autonomous voltage and frequency setting</label>
+        <label><input type="radio" name="q5"> Dependency on synchronous machines</label>
+        <label><input type="radio" name="q5"> Isolation from renewable sources</label>
+      </div>
+
+     <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson2.html">← Previous Lesson</a>
+      <a href="lesson4.html">Next Lesson →</a>
+    </div>
+  </div>
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!-- File: course4/lesson6.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 6 - Course 4</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 6: Modeling Converter Control Loops</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand the structure of control loops in power converters</li>
+      <li>Learn how to model inner and outer loops for voltage and current regulation</li>
+      <li>Analyze control loop interaction and stability</li>
+    </ul>
+
+    <h2>1. Control Architecture Overview</h2>
+    <p>Power converters typically use cascaded control loops to manage voltage and current. The inner loop controls fast dynamics (usually current), while the outer loop handles voltage or power regulation.</p>
+
+    <h2>2. Inner and Outer Loop Modeling</h2>
+    <ul>
+      <li><strong>Current loop:</strong> Fast inner loop, often modeled with PI controllers and bandwidth optimization</li>
+      <li><strong>Voltage loop:</strong> Slower outer loop, tracks voltage references using output from the current loop</li>
+      <li><strong>Feedforward paths:</strong> Improve disturbance rejection and tracking performance</li>
+    </ul>
+
+    <h2>3. Control Loop Interaction</h2>
+    <p>Improper tuning can cause loop interaction and instability. Stability is ensured by:
+      <ul>
+        <li>Separating bandwidths (voltage loop slower than current loop)</li>
+        <li>Ensuring adequate phase margin in each loop</li>
+        <li>Using Bode plots to verify gain and phase behavior</li>
+      </ul>
+    </p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>Converter control involves cascaded inner and outer loops</li>
+      <li>Modeling each loop helps with controller design and tuning</li>
+      <li>Stability depends on proper bandwidth and gain margin separation</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What does the inner loop in converter control typically manage?</p>
+        <label><input type="radio" name="q1"> Voltage ripple</label>
+        <label><input type="radio" name="q1"> Switching noise</label>
+        <label><input type="radio" name="q1"> Current regulation</label>
+        <label><input type="radio" name="q1"> Grid voltage detection</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What is the main purpose of the outer loop?</p>
+        <label><input type="radio" name="q2"> Clock synchronization</label>
+        <label><input type="radio" name="q2"> Control capacitor ESR</label>
+        <label><input type="radio" name="q2"> Voltage or power regulation</label>
+        <label><input type="radio" name="q2"> Harmonic elimination</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. Why should bandwidths be separated?</p>
+        <label><input type="radio" name="q3"> To reduce losses</label>
+        <label><input type="radio" name="q3"> To increase switching speed</label>
+        <label><input type="radio" name="q3"> To avoid control loop interaction</label>
+        <label><input type="radio" name="q3"> To increase noise injection</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. Which tool is used to analyze loop stability?</p>
+        <label><input type="radio" name="q4"> Impedance spectrometer</label>
+        <label><input type="radio" name="q4"> Voltage divider</label>
+        <label><input type="radio" name="q4"> Bode plot</label>
+        <label><input type="radio" name="q4"> Transformer model</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What do feedforward paths help improve?</p>
+        <label><input type="radio" name="q5"> Component aging</label>
+        <label><input type="radio" name="q5"> Delay in PWM generation</label>
+        <label><input type="radio" name="q5"> Disturbance rejection and tracking</label>
+        <label><input type="radio" name="q5"> Signal aliasing</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson5.html">← Previous Lesson</a>
+      <a href="lesson7.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!-- File: course4/lesson9.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 9 - Course 4</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 9: Case Studies in HVdc, FACTS, and Wind Power Systems</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Apply modeling techniques to real-world converter-based systems</li>
+      <li>Analyze behavior of HVdc, FACTS, and wind power systems</li>
+      <li>Recognize control and stability considerations from case examples</li>
+    </ul>
+
+    <h2>1. HVdc Systems</h2>
+    <p>HVdc systems use VSC or MMC topologies for long-distance power transmission. Modeling focuses on control loop dynamics, converter impedance, and grid interaction. Case studies often examine black-start capability, fault recovery, and interaction with weak AC systems.</p>
+
+    <h2>2. FACTS Devices</h2>
+    <p>FACTS controllers such as STATCOMs and SVCs are modeled to support voltage and reactive power control. Studies show their impact on damping oscillations and regulating voltage under varying grid loads. Analytical modeling helps design robust controls against fast disturbances.</p>
+
+    <h2>3. Wind Power Systems</h2>
+    <p>Modern wind turbines rely on full-scale converters interfacing with the grid. Models must capture generator-converter dynamics, PLL behavior, and ride-through performance. Small-signal and impedance analysis are crucial to ensure grid compliance and coordination with other inverters.</p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>HVdc, FACTS, and wind systems all rely heavily on analytical converter models</li>
+      <li>Real-world studies help validate models and refine control strategies</li>
+      <li>Control design, grid codes, and stability margins are key concerns</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What does HVdc modeling often focus on?</p>
+        <label><input type="radio" name="q1"> Solar irradiance</label>
+        <label><input type="radio" name="q1"> Fuel supply</label>
+        <label><input type="radio" name="q1"> Converter dynamics and grid interaction</label>
+        <label><input type="radio" name="q1"> Transformer noise</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What do FACTS devices primarily control?</p>
+        <label><input type="radio" name="q2"> Generator torque</label>
+        <label><input type="radio" name="q2"> Line harmonics</label>
+        <label><input type="radio" name="q2"> Voltage and reactive power</label>
+        <label><input type="radio" name="q2"> Grid inertia</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. Why is modeling important for wind power systems?</p>
+        <label><input type="radio" name="q3"> To track sunlight</label>
+        <label><input type="radio" name="q3"> To monitor gearbox oil</label>
+        <label><input type="radio" name="q3"> To ensure grid code compliance and stability</label>
+        <label><input type="radio" name="q3"> To improve blade aerodynamics</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What behavior must be modeled in wind converters?</p>
+        <label><input type="radio" name="q4"> DC motor response</label>
+        <label><input type="radio" name="q4"> PLL and generator-converter interaction</label>
+        <label><input type="radio" name="q4"> Fuel injection rate</label>
+        <label><input type="radio" name="q4"> Soundproofing</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What role do case studies play in analytical modeling?</p>
+        <label><input type="radio" name="q5"> Replace simulations</label>
+        <label><input type="radio" name="q5"> Eliminate test requirements</label>
+        <label><input type="radio" name="q5"> Validate models and improve control design</label>
+        <label><input type="radio" name="q5"> Reduce hardware cost</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson8.html">← Previous Lesson</a>
+      <a href="lesson10.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

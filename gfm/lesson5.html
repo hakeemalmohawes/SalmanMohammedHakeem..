@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 5 - GFM</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 5: Dynamic Behavior of Grid-Forming Inverters</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand how GFMs respond dynamically to changes in load and disturbances</li>
+      <li>Explain the concepts of virtual inertia and damping</li>
+      <li>Compare the dynamic behavior of GFMs to that of synchronous machines</li>
+    </ul>
+
+    <h2>📊 1. Transient and Dynamic Response</h2>
+    <p>Grid-forming inverters play an essential role in maintaining the dynamic stability of a power system. When the load suddenly increases or generation fluctuates, GFMs must respond by adjusting their output frequency and voltage to stabilize the system. Their control systems are designed to react quickly and predictably to such changes, ensuring continuous operation.</p>
+
+    <h2>🤼 2. Virtual Inertia</h2>
+    <p>Synchronous machines inherently provide inertia due to their rotating mass, which resists changes in frequency. GFMs replicate this effect using <strong>virtual inertia</strong>, implemented through control algorithms that slow the rate of frequency change in response to power imbalances. This helps prevent large frequency swings in low-inertia grids dominated by inverters.</p>
+
+    <h2>💪 3. Damping Control</h2>
+    <p>In addition to inertia, GFMs introduce damping, which mitigates oscillations in voltage and frequency. This damping is achieved by incorporating derivative terms or energy storage buffers into the control loop. The goal is to absorb and dissipate energy fluctuations before they destabilize the grid.</p>
+
+    <h2>⚡ 4. Comparison with GFL Inverters</h2>
+    <p>Grid-following inverters (GFLs) do not contribute to system inertia or damping. They rely entirely on the grid reference and may even disconnect during disturbances. GFMs, in contrast, remain online, stabilize the system, and provide valuable dynamic support. This makes them a critical component of modern, inverter-rich power systems.</p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFMs enhance grid stability during dynamic events like load changes or faults</li>
+      <li>Virtual inertia emulates generator mass to resist frequency deviations</li>
+      <li>Damping control suppresses power system oscillations</li>
+      <li>GFMs outperform GFLs in resilience and dynamic contribution</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What is the purpose of virtual inertia in GFMs?</p>
+        <label><input type="radio" name="q1"> Reduce voltage ripple</label>
+        <label><input type="radio" name="q1"> Slow down frequency changes</label>
+        <label><input type="radio" name="q1"> Store reactive power</label>
+        <label><input type="radio" name="q1"> Eliminate harmonic distortion</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What does damping in a GFM inverter do?</p>
+        <label><input type="radio" name="q2"> Amplify frequency swings</label>
+        <label><input type="radio" name="q2"> Reduce oscillations in the system</label>
+        <label><input type="radio" name="q2"> Boost voltage output</label>
+        <label><input type="radio" name="q2"> Measure current harmonics</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. Compared to GFL inverters, GFMs:</p>
+        <label><input type="radio" name="q3"> Disconnect faster during faults</label>
+        <label><input type="radio" name="q3"> Follow the grid without influencing it</label>
+        <label><input type="radio" name="q3"> Provide inertia and stabilize the grid</label>
+        <label><input type="radio" name="q3"> Offer better harmonic filtering only</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. Which of the following is a benefit of virtual inertia?</p>
+        <label><input type="radio" name="q4"> Decreases power factor</label>
+        <label><input type="radio" name="q4"> Increases frequency instability</label>
+        <label><input type="radio" name="q4"> Helps maintain frequency stability</label>
+        <label><input type="radio" name="q4"> Bypasses fault currents</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. Why is damping control important?</p>
+        <label><input type="radio" name="q5"> To speed up current injection</label>
+        <label><input type="radio" name="q5"> To amplify harmonics</label>
+        <label><input type="radio" name="q5"> To suppress system oscillations</label>
+        <label><input type="radio" name="q5"> To disconnect loads</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson4.html">← Previous Lesson</a>
+      <a href="lesson6.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

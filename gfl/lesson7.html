@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 7 - GFL</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 7: Interaction Between GFL and GFM Inverters</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand how GFL and GFM inverters operate together</li>
+      <li>Learn the complementary roles of current-source and voltage-source inverters</li>
+      <li>Explore challenges and benefits of hybrid systems</li>
+    </ul>
+
+    <h2>🤝 1. Complementary Operation</h2>
+    <p>GFM inverters create the voltage and frequency reference for a power system. GFL inverters rely on that reference to inject synchronized current. In a hybrid system, GFMs form the grid, and GFLs follow it. This allows the GFLs to operate effectively even in the absence of traditional synchronous machines.</p>
+
+    <h2>⚙️ 2. Functional Roles</h2>
+    <ul>
+      <li><strong>GFMs:</strong> Regulate voltage magnitude and frequency, handle grid dynamics</li>
+      <li><strong>GFLs:</strong> Deliver real/reactive power based on the existing reference</li>
+    </ul>
+
+    <h2>🌿 3. Benefits of Hybrid Operation</h2>
+    <ul>
+      <li>Enables higher renewable penetration</li>
+      <li>Reduces need for synchronous machines</li>
+      <li>Utilizes the cost-efficiency of GFLs while maintaining grid stability with GFMs</li>
+    </ul>
+
+    <h2>⚠️ 4. Coordination Challenges</h2>
+    <p>To ensure stable operation, GFMs and GFLs must be properly coordinated:</p>
+    <ul>
+      <li>Control loop interactions can lead to oscillations</li>
+      <li>Inertia mismatch may affect fault response</li>
+      <li>Protection systems must recognize both inverter types</li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFM and GFL inverters work best together in hybrid systems</li>
+      <li>GFMs provide grid support; GFLs deliver power</li>
+      <li>Proper tuning and coordination are essential for reliability</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What does a GFM inverter provide in a hybrid system?</p>
+        <label><input type="radio" name="q1"> Pure reactive power</label>
+        <label><input type="radio" name="q1"> Voltage and frequency reference</label>
+        <label><input type="radio" name="q1"> Battery charging</label>
+        <label><input type="radio" name="q1"> DC link voltage</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What is the role of a GFL inverter in this setup?</p>
+        <label><input type="radio" name="q2"> Emulate synchronous generator</label>
+        <label><input type="radio" name="q2"> Follow voltage and inject power</label>
+        <label><input type="radio" name="q2"> Operate in isolation</label>
+        <label><input type="radio" name="q2"> Regulate grid impedance</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What is a key benefit of using GFMs with GFLs?</p>
+        <label><input type="radio" name="q3"> Lower transformer impedance</label>
+        <label><input type="radio" name="q3"> Increased cable length</label>
+        <label><input type="radio" name="q3"> Stability in inverter-dominated grids</label>
+        <label><input type="radio" name="q3"> Higher harmonics</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What challenge may arise from mixed GFL and GFM control?</p>
+        <label><input type="radio" name="q4"> Reduced reactive power</label>
+        <label><input type="radio" name="q4"> Synchronization failure of GFM</label>
+        <label><input type="radio" name="q4"> Control loop interaction causing instability</label>
+        <label><input type="radio" name="q4"> Slower PLL lock time</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. How can hybrid systems help the renewable transition?</p>
+        <label><input type="radio" name="q5"> Increase cost and complexity</label>
+        <label><input type="radio" name="q5"> Minimize renewable share</label>
+        <label><input type="radio" name="q5"> Combine stability and affordability</label>
+        <label><input type="radio" name="q5"> Eliminate the need for standards</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson6.html">← Previous Lesson</a>
+      <a href="lesson8.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

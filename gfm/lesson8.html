@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 8 - GFM</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 8: Protection and Fault Handling in Grid-Forming Inverters</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand how GFMs handle faults and disturbances</li>
+      <li>Recognize protection strategies compatible with inverter-based grids</li>
+      <li>Compare traditional fault response with GFM fault ride-through</li>
+    </ul>
+
+    <h2>⚠️ 1. Fault Current Characteristics</h2>
+    <p>Unlike synchronous machines, which can supply several times their rated current during a fault, GFMs typically limit their current to 1.1–2 times rated current. Their fault current is defined by control algorithms and semiconductor ratings. This lower current challenges traditional protection systems that rely on overcurrent detection.</p>
+
+    <h2>🛡️ 2. Fault Ride-Through (FRT)</h2>
+    <p>Grid-forming inverters are expected to stay connected and support the system during transient events. This behavior, known as <strong>fault ride-through</strong>, allows the GFM to maintain voltage and stabilize frequency even during faults. The GFM may reduce power output or switch to current-limited mode while maintaining synchronism.</p>
+
+    <h2>⚖️ 3. Control During Faults</h2>
+    <p>During a disturbance, the GFM controller adjusts its output to remain within safe operating limits while contributing to system recovery. This may involve prioritizing frequency control, reducing reactive power output, or enabling dynamic current limitation based on fault type and location.</p>
+
+    <h2>🚪 4. Inverter-Compatible Protection</h2>
+    <p>Because of their limited fault current, GFMs require new protection strategies:</p>
+    <ul>
+      <li><strong>Voltage-based protection:</strong> Uses under/over-voltage thresholds</li>
+      <li><strong>Rate-of-change of frequency (ROCOF):</strong> Detects fast system events</li>
+      <li><strong>Directional relays:</strong> Evaluate power flow for fault location</li>
+      <li><strong>Communication-aided protection:</strong> Coordinates between relays and controllers</li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFM fault current is limited and controlled</li>
+      <li>They support fault ride-through and grid stability</li>
+      <li>Traditional protection methods must be adapted for GFM behavior</li>
+      <li>Advanced, communication-based, and voltage-sensitive relays are essential</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. How much fault current can GFMs typically supply?</p>
+        <label><input type="radio" name="q1"> 3–5 times rated</label>
+        <label><input type="radio" name="q1"> 10 times rated</label>
+        <label><input type="radio" name="q1"> 1.1–2 times rated</label>
+        <label><input type="radio" name="q1"> Zero current</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What is fault ride-through?</p>
+        <label><input type="radio" name="q2"> Shutting down during faults</label>
+        <label><input type="radio" name="q2"> Disconnecting instantly</label>
+        <label><input type="radio" name="q2"> Maintaining operation and support during faults</label>
+        <label><input type="radio" name="q2"> Fault current injection</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What does a GFM typically prioritize during a fault?</p>
+        <label><input type="radio" name="q3"> Reactive power injection</label>
+        <label><input type="radio" name="q3"> Harmonic suppression</label>
+        <label><input type="radio" name="q3"> Frequency and voltage stability</label>
+        <label><input type="radio" name="q3"> Battery charging</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. Why are traditional protection systems insufficient?</p>
+        <label><input type="radio" name="q4"> They rely on high fault currents</label>
+        <label><input type="radio" name="q4"> They use smart inverters</label>
+        <label><input type="radio" name="q4"> They require synchronverters</label>
+        <label><input type="radio" name="q4"> They detect ROCOF</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What type of protection is well-suited to GFMs?</p>
+        <label><input type="radio" name="q5"> Overcurrent only</label>
+        <label><input type="radio" name="q5"> Voltage and frequency sensing with communication</label>
+        <label><input type="radio" name="q5"> Step-up transformers</label>
+        <label><input type="radio" name="q5"> High-impedance fuses</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson7.html">← Previous Lesson</a>
+      <a href="lesson9.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

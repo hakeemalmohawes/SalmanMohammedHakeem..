@@ -1,0 +1,115 @@
+<!-- File: course3/lesson8.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 8 - Course 3</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 8: Duality in Multi-Inverter Coordination and System Design</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Explore how duality assists in coordinating multiple inverters</li>
+      <li>Understand interaction patterns in multi-inverter systems</li>
+      <li>Learn strategies for scalable and robust inverter coordination</li>
+    </ul>
+
+    <h2>1. The Need for Coordination</h2>
+    <p>Modern grids may include dozens or hundreds of inverters operating together. Coordinating GFM and GFL inverters becomes essential for frequency regulation, voltage support, and power sharing — especially during transients and load changes.</p>
+
+    <h2>2. Duality as a Design Tool</h2>
+    <p>Duality allows us to structure systems so that GFM inverters serve as "anchors" and GFL inverters as "followers." This separation simplifies the design of coordination layers, stabilizes frequency response, and minimizes communication needs.</p>
+
+    <h2>3. Design Considerations</h2>
+    <ul>
+      <li><strong>Anchor Density:</strong> Adequate GFM presence is required to keep system synchronized</li>
+      <li><strong>Follower Responsiveness:</strong> GFL units must rapidly and stably follow voltage references</li>
+      <li><strong>Hierarchical Control:</strong> Decentralized GFM control + centralized GFL coordination improves scalability</li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>Coordination is critical in systems with many inverters</li>
+      <li>Duality helps structure GFM-GFL interaction into anchor-follower dynamics</li>
+      <li>Designs should balance GFM strength with GFL responsiveness</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What is the role of GFM inverters in coordination?</p>
+        <label><input type="radio" name="q1"> Act as passive loads</label>
+        <label><input type="radio" name="q1"> Follow grid voltage</label>
+        <label><input type="radio" name="q1"> Anchor voltage and frequency</label>
+        <label><input type="radio" name="q1"> Synchronize relays</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What analogy describes GFM-GFL coordination?</p>
+        <label><input type="radio" name="q2"> Leader-follower</label>
+        <label><input type="radio" name="q2"> Source-drain</label>
+        <label><input type="radio" name="q2"> Resistor-capacitor</label>
+        <label><input type="radio" name="q2"> Star-delta</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What happens if anchor density is too low?</p>
+        <label><input type="radio" name="q3"> Improved redundancy</label>
+        <label><input type="radio" name="q3"> Faster convergence</label>
+        <label><input type="radio" name="q3"> Poor voltage/frequency control</label>
+        <label><input type="radio" name="q3"> Higher power factor</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. How should GFL inverters behave?</p>
+        <label><input type="radio" name="q4"> Inject arbitrary frequency</label>
+        <label><input type="radio" name="q4"> Follow GFM voltage references rapidly</label>
+        <label><input type="radio" name="q4"> Operate without sensing</label>
+        <label><input type="radio" name="q4"> Control their own phase independently</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What control structure enhances multi-inverter scalability?</p>
+        <label><input type="radio" name="q5"> Fully centralized GFM control</label>
+        <label><input type="radio" name="q5"> GFL-only operation</label>
+        <label><input type="radio" name="q5"> Hierarchical control with decentralized GFM and centralized GFL</label>
+        <label><input type="radio" name="q5"> Rigid line frequency control</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson7.html">← Previous Lesson</a>
+      <a href="lesson9.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

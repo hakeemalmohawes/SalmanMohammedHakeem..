@@ -1,0 +1,116 @@
+<!-- File: courses/100-renewable-grid/lessons/lesson2.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 2 - 100% Renewable Grid</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 2: Power System Challenges at High VRE Penetration</h1>
+  </header>
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Identify major operational challenges that arise at high levels of variable renewable energy (VRE)</li>
+      <li>Understand the concepts of flexibility, inertia, and frequency stability</li>
+      <li>Explain why traditional grid models struggle at high VRE penetration</li>
+    </ul>
+
+    <h2>1. Reduced Inertia and Frequency Stability</h2>
+    <p>Traditional power plants provide rotational inertia, which helps stabilize grid frequency during disturbances. Inverter-based resources like wind and solar do not naturally provide this inertia, making the system more sensitive to sudden imbalances. Maintaining frequency stability requires new control strategies and technologies like grid-forming inverters.</p>
+
+    <h2>2. Variability and Forecast Uncertainty</h2>
+    <p>Wind and solar power are weather-dependent and inherently variable. Although forecasting has improved, uncertainty remains, especially on short timescales. This makes it harder to match supply and demand precisely, increasing the need for reserves and rapid-response resources.</p>
+
+    <h2>3. Declining System Flexibility</h2>
+    <p>System flexibility is the grid’s ability to ramp generation up or down quickly. As conventional plants reduce output or shut down, the system may lack the resources needed to respond quickly to changes in net load. This increases the risk of curtailment or instability unless storage or demand flexibility is added.</p>
+
+    <h2>4. Protection and Stability Concerns</h2>
+    <p>Inverter-based resources behave differently during faults—they provide less fault current and react faster than traditional machines. This can disrupt conventional protection schemes and challenge voltage and small-signal stability, requiring redesigned system protection and new control tools.</p>
+
+    <h2>5. The Need for System Redesign</h2>
+    <p>The challenges described above highlight the need for systemic change—not just adding renewables, but rethinking grid planning, controls, protection, and market structures. Future-ready systems must be designed for flexibility, resilience, and real-time visibility.</p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>High VRE penetration introduces challenges in inertia, flexibility, and protection</li>
+      <li>Traditional control and planning tools must evolve for inverter-dominated grids</li>
+      <li>Redesigning systems for VRE is essential for reliability and stability</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. Why is system inertia reduced with high VRE penetration?</p>
+        <label><input type="radio" name="q1"> More fossil fuels are used</label>
+        <label><input type="radio" name="q1"> Inverter-based resources lack rotational mass</label>
+        <label><input type="radio" name="q1"> Generators are spinning faster</label>
+        <label><input type="radio" name="q1"> Demand drops dramatically</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What causes forecast uncertainty in VRE systems?</p>
+        <label><input type="radio" name="q2"> Political issues</label>
+        <label><input type="radio" name="q2"> Grid congestion</label>
+        <label><input type="radio" name="q2"> Weather variability</label>
+        <label><input type="radio" name="q2"> Fuel shortages</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What does reduced system flexibility mean?</p>
+        <label><input type="radio" name="q3"> The grid has more blackouts</label>
+        <label><input type="radio" name="q3"> There is more coal generation</label>
+        <label><input type="radio" name="q3"> Fewer resources can ramp quickly</label>
+        <label><input type="radio" name="q3"> Renewables are constant</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. Why do protection schemes struggle in high VRE grids?</p>
+        <label><input type="radio" name="q4"> Inverters overload quickly</label>
+        <label><input type="radio" name="q4"> Inverters don’t produce fault currents like traditional machines</label>
+        <label><input type="radio" name="q4"> Wind turbines are noisy</label>
+        <label><input type="radio" name="q4"> Battery voltage is too high</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What must happen to maintain reliability at high VRE levels?</p>
+        <label><input type="radio" name="q5"> Keep building coal plants</label>
+        <label><input type="radio" name="q5"> Ignore inverter characteristics</label>
+        <label><input type="radio" name="q5"> Redesign grid planning, controls, and protections</label>
+        <label><input type="radio" name="q5"> Limit renewable installation</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson1.html">← Previous Lesson</a>
+      <a href="lesson3.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

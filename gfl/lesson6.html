@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 6 - GFL</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 6: Limitations in Weak and Unstable Grids</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Identify the limitations of GFL inverters in weak and unstable grid environments</li>
+      <li>Understand how voltage dips and frequency changes affect GFL performance</li>
+      <li>Explore challenges of protection, synchronization, and system resilience</li>
+    </ul>
+
+    <h2>💡 1. Weak Grid Definition</h2>
+    <p>A <strong>weak grid</strong> has low short-circuit power and high impedance, resulting in poor voltage and frequency stability. In such environments, the voltage waveform is more susceptible to distortion, sags, and harmonic interference.</p>
+
+    <h2>❌ 2. GFL Performance Issues</h2>
+    <ul>
+      <li><strong>PLL instability:</strong> GFLs rely on PLLs that may become erratic during disturbances</li>
+      <li><strong>Current overshoot:</strong> Grid impedance can lead to overcurrent faults</li>
+      <li><strong>Disconnection risk:</strong> GFLs may trip offline during faults or sag events</li>
+    </ul>
+
+    <h2>🤞 3. Fault Response Limitations</h2>
+    <p>In weak grids, GFLs may fail to ride through faults, and their limited control authority makes it hard to support grid recovery. Voltage and frequency excursions beyond allowed margins usually cause inverters to disconnect, potentially making grid restoration harder.</p>
+
+    <h2>⚖️ 4. Coordination Challenges</h2>
+    <ul>
+      <li>GFLs cannot set voltage or frequency references</li>
+      <li>They cannot form or maintain an islanded microgrid</li>
+      <li>They rely on external sources (e.g., synchronous machines or GFMs)</li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFL inverters are limited in weak and unstable grids due to PLL dependency</li>
+      <li>They may disconnect during faults, leading to grid instability</li>
+      <li>They require strong reference sources to operate correctly</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What defines a weak grid?</p>
+        <label><input type="radio" name="q1"> High inertia and low voltage</label>
+        <label><input type="radio" name="q1"> Low short-circuit power and high impedance</label>
+        <label><input type="radio" name="q1"> Strong frequency support</label>
+        <label><input type="radio" name="q1"> Zero harmonic distortion</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What issue does high grid impedance cause for GFLs?</p>
+        <label><input type="radio" name="q2"> Smoother voltage curves</label>
+        <label><input type="radio" name="q2"> Overcurrent and instability</label>
+        <label><input type="radio" name="q2"> Better phase tracking</label>
+        <label><input type="radio" name="q2"> Stronger synchronization</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. Why do GFL inverters struggle with fault ride-through?</p>
+        <label><input type="radio" name="q3"> They inject too much voltage</label>
+        <label><input type="radio" name="q3"> They cannot form a voltage reference</label>
+        <label><input type="radio" name="q3"> They increase grid inertia</label>
+        <label><input type="radio" name="q3"> They operate off-grid</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What usually happens to GFLs during grid disturbances?</p>
+        <label><input type="radio" name="q4"> They remain connected and support voltage</label>
+        <label><input type="radio" name="q4"> They form an island</label>
+        <label><input type="radio" name="q4"> They disconnect to protect themselves</label>
+        <label><input type="radio" name="q4"> They act as voltage sources</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What do GFLs require to operate stably?</p>
+        <label><input type="radio" name="q5"> Low-voltage networks</label>
+        <label><input type="radio" name="q5"> Synchronization-free operation</label>
+        <label><input type="radio" name="q5"> External voltage and frequency references</label>
+        <label><input type="radio" name="q5"> Standalone microgrid controllers</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson5.html">← Previous Lesson</a>
+      <a href="lesson7.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

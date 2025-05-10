@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 3 - GFM</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 3: Characteristics and Control Objectives of Grid-Forming Inverters</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Identify the defining behaviors and responsibilities of GFMs in a power system</li>
+      <li>Understand what makes a GFM different from a GFL inverter</li>
+      <li>Explain key control objectives like synchronization, stability, and grid support</li>
+    </ul>
+
+    <h2>🔄 1. Self-Synchronization</h2>
+    <p>One of the most important characteristics of a GFM inverter is its ability to <strong>self-synchronize</strong>. Unlike GFL inverters that require a Phase-Locked Loop (PLL) to detect grid conditions, a GFM generates its own voltage waveform, making it the reference for other devices. This allows it to operate in islanded mode and support weak grids.</p>
+
+    <h2>🚗 2. Voltage Source Behavior</h2>
+    <p>GFMs behave as <strong>voltage sources</strong> with specified amplitude and frequency. They regulate these parameters autonomously and are capable of adjusting based on power flow, using droop or virtual oscillator control. This capability is crucial in scenarios where there is no dominant grid-forming source.</p>
+
+    <h2>📈 3. Inertia and Damping</h2>
+    <p>Inverter-based systems do not have physical rotating mass, but GFM inverters can emulate <strong>virtual inertia and damping</strong> through control algorithms. This helps the grid resist frequency deviations and improves dynamic stability.</p>
+
+    <h2>🪧 4. Fault Ride-Through and Grid Support</h2>
+    <p>Unlike GFL inverters, which often disconnect during grid faults, GFMs are designed to <strong>ride through disturbances</strong> and provide support. They can inject current to support voltage or help with frequency stability during events like faults or load swings.</p>
+
+    <h2>📊 5. Black Start Capability</h2>
+    <p>GFMs can <strong>energize a de-energized grid</strong>, a process known as black start. This is critical for system restoration after a major outage. Their ability to form a grid without external signals is what sets them apart from all other inverter types.</p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFMs self-synchronize and act as voltage sources</li>
+      <li>They provide synthetic inertia and damping to stabilize the grid</li>
+      <li>They ride through faults and can perform black start</li>
+      <li>Their behavior is central to the future of stable inverter-dominated grids</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What makes GFM inverters self-synchronizing?</p>
+        <label><input type="radio" name="q1"> Their PLL circuits</label>
+        <label><input type="radio" name="q1"> Their voltage-forming behavior</label>
+        <label><input type="radio" name="q1"> Their connection to batteries</label>
+        <label><input type="radio" name="q1"> Their rotating machines</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. Which statement is true about GFM voltage source behavior?</p>
+        <label><input type="radio" name="q2"> They follow the grid like GFLs</label>
+        <label><input type="radio" name="q2"> They inject current based on PLL</label>
+        <label><input type="radio" name="q2"> They set voltage amplitude and frequency autonomously</label>
+        <label><input type="radio" name="q2"> They only operate with diesel backup</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What is virtual inertia in GFMs?</p>
+        <label><input type="radio" name="q3"> A battery inside the inverter</label>
+        <label><input type="radio" name="q3"> A function to improve voltage rise</label>
+        <label><input type="radio" name="q3"> A control-based method to resist frequency change</label>
+        <label><input type="radio" name="q3"> A type of harmonic filter</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What feature allows GFMs to continue operating during faults?</p>
+        <label><input type="radio" name="q4"> Overcurrent detection</label>
+        <label><input type="radio" name="q4"> Fault ride-through capability</label>
+        <label><input type="radio" name="q4"> Anti-islanding control</label>
+        <label><input type="radio" name="q4"> Ground fault interrupt</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. Why is black start capability important?</p>
+        <label><input type="radio" name="q5"> To control reactive power</label>
+        <label><input type="radio" name="q5"> To start a grid after an outage</label>
+        <label><input type="radio" name="q5"> To reduce harmonics</label>
+        <label><input type="radio" name="q5"> To follow a PLL signal</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson2.html">← Previous Lesson</a>
+      <a href="lesson4.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

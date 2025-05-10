@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 6 - Grid-Forming Inverters</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 6: GFM Inverters and Power System Stability</h1>
+  </header>
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand how GFMs contribute to voltage and frequency stability</li>
+      <li>Explore inertia emulation and damping control</li>
+      <li>Learn how GFMs enhance resilience in inverter-dominated grids</li>
+    </ul>
+
+    <h2>1. Voltage Stability Contributions</h2>
+    <p>GFMs actively regulate their terminal voltage, which supports voltage stability across the network. Their ability to source and sink reactive power quickly helps mitigate voltage dips, particularly in weak grids or at long-distance feeders.</p>
+
+    <h2>2. Frequency Stability and Inertia Emulation</h2>
+    <p>In traditional grids, rotating mass provides inertia that buffers against sudden frequency changes. GFMs emulate this by adjusting their frequency setpoint dynamically in response to power imbalances, simulating the swing equation of synchronous machines.</p>
+
+    <h2>3. Damping and Synchronization</h2>
+    <p>Many GFM implementations incorporate virtual damping to suppress oscillations during transients. Their synchronization-free nature also avoids interaction delays that PLL-based systems suffer from, improving dynamic response and reducing grid fragility.</p>
+
+    <h2>4. Supporting Grid Resilience</h2>
+    <ul>
+      <li>Enable black-start by establishing voltage and frequency</li>
+      <li>Remain stable and online during grid faults or low-inertia events</li>
+      <li>Coordinate with other GFMs to maintain smooth transitions</li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFMs play a crucial role in grid voltage and frequency stabilization</li>
+      <li>They emulate inertia and damping, mimicking traditional generators</li>
+      <li>Resilience is enhanced through autonomous voltage and frequency control</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+      <div class="quiz-question">
+        <p>1. What role do GFMs play in voltage stability?</p>
+        <label><input type="radio" name="q1"> Load balancing</label>
+        <label><input type="radio" name="q1"> Reactive power regulation</label>
+        <label><input type="radio" name="q1"> Transformer optimization</label>
+        <label><input type="radio" name="q1"> Insulation testing</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. How do GFMs support frequency stability?</p>
+        <label><input type="radio" name="q2"> By following a PLL</label>
+        <label><input type="radio" name="q2"> By adding mechanical governors</label>
+        <label><input type="radio" name="q2"> Through inertia emulation</label>
+        <label><input type="radio" name="q2"> With step-up transformers</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What is virtual damping used for?</p>
+        <label><input type="radio" name="q3"> Heat dissipation</label>
+        <label><input type="radio" name="q3"> Reducing oscillations</label>
+        <label><input type="radio" name="q3"> Speeding up PLL lock</label>
+        <label><input type="radio" name="q3"> Lowering switching frequency</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. Why are GFMs good for black-start?</p>
+        <label><input type="radio" name="q4"> They rely on GFL references</label>
+        <label><input type="radio" name="q4"> They establish voltage and frequency</label>
+        <label><input type="radio" name="q4"> They avoid faults</label>
+        <label><input type="radio" name="q4"> They switch to diesel mode</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What makes GFMs more responsive than PLL-based inverters?</p>
+        <label><input type="radio" name="q5"> Voltage control delay</label>
+        <label><input type="radio" name="q5"> Synchronization-free design</label>
+        <label><input type="radio" name="q5"> Higher switching frequency</label>
+        <label><input type="radio" name="q5"> Transformer impedance tuning</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson5.html">← Previous Lesson</a>
+      <a href="lesson7.html">Next Lesson →</a>
+    </div>
+  </div>
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 9 - GFM</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 9: Role of GFMs in Renewable-Dominated Grids</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand the importance of GFMs in high-renewable scenarios</li>
+      <li>Explain how GFMs support system stability and resilience</li>
+      <li>Explore case studies and system integration examples</li>
+    </ul>
+
+    <h2>🌿 1. Decline of Synchronous Generators</h2>
+    <p>As renewable energy sources replace fossil-fuel-based generation, synchronous machines—traditionally the backbone of grid stability—are being retired. This leads to reduced inertia, voltage support, and fault handling. Without intervention, power systems become more fragile and harder to control.</p>
+
+    <h2>⚡ 2. GFMs as a Replacement Backbone</h2>
+    <p>GFMs offer a pathway to restore stability and functionality in a grid dominated by inverter-based resources. Acting as virtual synchronous machines, they provide synthetic inertia, regulate frequency, stabilize voltage, and contribute to fault response. These features are essential to maintain a reliable and resilient grid.</p>
+
+    <h2>🌍 3. Case Study: 100% Inverter-Based Island</h2>
+    <p>Several pilot projects have demonstrated GFMs powering entire grids without synchronous machines. One example is the use of battery-based GFMs in island communities where diesel generators have been fully displaced. The GFMs maintain stable voltage and frequency while coordinating multiple renewables.</p>
+
+    <h2>📊 4. System Planning Considerations</h2>
+    <ul>
+      <li>GFMs must be strategically placed to maintain stability zones</li>
+      <li>Control parameters must be tuned for coordination and power sharing</li>
+      <li>Hybrid setups with GFLs benefit from a minimal share of GFMs acting as anchors</li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFMs are essential to support high-renewable, low-inertia power systems</li>
+      <li>They provide critical grid services previously handled by synchronous generators</li>
+      <li>Real-world deployments confirm the feasibility of inverter-only operation</li>
+      <li>Planning, placement, and tuning are key to successful system integration</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What is a challenge of renewable-dominated grids?</p>
+        <label><input type="radio" name="q1"> Too much reactive power</label>
+        <label><input type="radio" name="q1"> Loss of synchronous generator services</label>
+        <label><input type="radio" name="q1"> Increased battery lifespan</label>
+        <label><input type="radio" name="q1"> Reduced cable insulation</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What service does a GFM provide that helps system inertia?</p>
+        <label><input type="radio" name="q2"> Harmonic distortion</label>
+        <label><input type="radio" name="q2"> Voltage sag compensation</label>
+        <label><input type="radio" name="q2"> Synthetic inertia</label>
+        <label><input type="radio" name="q2"> Battery voltage regulation</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. Which type of grid has successfully used only GFMs?</p>
+        <label><input type="radio" name="q3"> Large interconnected grid</label>
+        <label><input type="radio" name="q3"> High-voltage DC grid</label>
+        <label><input type="radio" name="q3"> Island microgrid</label>
+        <label><input type="radio" name="q3"> Traction network</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. Why is GFM tuning important?</p>
+        <label><input type="radio" name="q4"> To match cable lengths</label>
+        <label><input type="radio" name="q4"> To maximize GFL output</label>
+        <label><input type="radio" name="q4"> To ensure power sharing and stability</label>
+        <label><input type="radio" name="q4"> To reduce heat losses</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What benefit does strategic GFM placement provide?</p>
+        <label><input type="radio" name="q5"> Higher switching frequencies</label>
+        <label><input type="radio" name="q5"> Better stability zones and grid anchoring</label>
+        <label><input type="radio" name="q5"> Faster insulation breakdown</label>
+        <label><input type="radio" name="q5"> Elimination of solar curtailment</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson8.html">← Previous Lesson</a>
+      <a href="lesson10.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

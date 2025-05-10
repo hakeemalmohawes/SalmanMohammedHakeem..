@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 7 - Grid-Forming Inverters</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 7: Modeling and Simulation of Grid-Forming Inverters</h1>
+  </header>
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand the key elements of modeling grid-forming inverters (GFMs)</li>
+      <li>Explore different levels of abstraction for simulation</li>
+      <li>Review practical use cases in grid planning and analysis</li>
+    </ul>
+
+    <h2>1. Why Modeling Matters</h2>
+    <p>Modeling helps engineers and researchers analyze system stability, dynamic response, and interactions between GFMs and other grid elements. It is essential for controller design, protection planning, and grid code compliance.</p>
+
+    <h2>2. Levels of Modeling</h2>
+    <ul>
+      <li><strong>EMT (Electromagnetic Transients):</strong> Captures switching-level behavior of converters</li>
+      <li><strong>RMS (Root Mean Square):</strong> Simplifies dynamic studies without high-frequency switching</li>
+      <li><strong>Phasor-Based:</strong> Used in large-scale grid simulations for planning and dispatch</li>
+    </ul>
+
+    <h2>3. Modeling Components</h2>
+    <ul>
+      <li>Voltage source control block with droop or VSM logic</li>
+      <li>Frequency and phase dynamics (including virtual inertia)</li>
+      <li>Reactive and active power regulation</li>
+      <li>Optional filters, transformers, and protection logic</li>
+    </ul>
+
+    <h2>4. Simulation Environments</h2>
+    <p>Popular tools include MATLAB/Simulink, PSCAD, DIgSILENT PowerFactory, and PLECS. These platforms support both time-domain simulations and control co-design using embedded C or hardware-in-the-loop (HIL) testing.</p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>Modeling GFMs enables safe and effective integration into real grids</li>
+      <li>Multiple abstraction levels are used for different purposes</li>
+      <li>Simulation tools play a vital role in development, validation, and deployment</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+      <div class="quiz-question">
+        <p>1. Why do we model grid-forming inverters?</p>
+        <label><input type="radio" name="q1"> To increase filter size</label>
+        <label><input type="radio" name="q1"> To analyze stability and response</label>
+        <label><input type="radio" name="q1"> To reduce cable length</label>
+        <label><input type="radio" name="q1"> To size resistors</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What does EMT modeling capture?</p>
+        <label><input type="radio" name="q2"> Average grid behavior</label>
+        <label><input type="radio" name="q2"> Switching-level dynamics</label>
+        <label><input type="radio" name="q2"> HVAC control</label>
+        <label><input type="radio" name="q2"> Load curves only</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What type of modeling is used in grid planning?</p>
+        <label><input type="radio" name="q3"> Phasor-based</label>
+        <label><input type="radio" name="q3"> EMT</label>
+        <label><input type="radio" name="q3"> Device-level</label>
+        <label><input type="radio" name="q3"> HIL</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. Which tool is NOT commonly used for GFM simulation?</p>
+        <label><input type="radio" name="q4"> PSCAD</label>
+        <label><input type="radio" name="q4"> PLECS</label>
+        <label><input type="radio" name="q4"> PowerPoint</label>
+        <label><input type="radio" name="q4"> DIgSILENT</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What is included in a GFM model?</p>
+        <label><input type="radio" name="q5"> Inertia-only devices</label>
+        <label><input type="radio" name="q5"> Control logic, power flow, and filters</label>
+        <label><input type="radio" name="q5"> Pure mechanical drives</label>
+        <label><input type="radio" name="q5"> Motor soft-starters</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson6.html">← Previous Lesson</a>
+      <a href="lesson8.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

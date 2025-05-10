@@ -1,0 +1,122 @@
+<!-- File: course4/lesson4.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 4 - Course 4</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 4: Linearization and Small-Signal Modeling</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Learn the process of linearizing nonlinear converter models</li>
+      <li>Understand the use of small-signal modeling in stability analysis</li>
+      <li>Apply perturbation methods to derive transfer functions</li>
+    </ul>
+
+    <h2>1. Why Linearize?</h2>
+    <p>Converters operate under nonlinear switching behavior. However, for control design and system analysis, we use linearized small-signal models around an operating point. This simplifies analysis using frequency-domain tools like Bode and Nyquist plots.</p>
+
+    <h2>2. Linearization Procedure</h2>
+    <ul>
+      <li>Determine the steady-state operating point (voltages, currents, duty cycles)</li>
+      <li>Introduce small perturbations around the steady-state</li>
+      <li>Derive a set of linear differential equations using Taylor expansion</li>
+      <li>Convert to transfer functions or state-space models for analysis</li>
+    </ul>
+
+    <h2>3. Application in Stability Studies</h2>
+    <p>Small-signal models are used to:
+      <ul>
+        <li>Design controllers using classical or modern techniques</li>
+        <li>Analyze system stability via root locus or frequency response</li>
+        <li>Evaluate interaction between converter and grid impedance</li>
+      </ul>
+    </p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>Linearization enables simpler analysis of nonlinear converter behavior</li>
+      <li>Small-signal models are essential for frequency-domain control design</li>
+      <li>Used to derive transfer functions and assess system stability</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What is the purpose of small-signal modeling?</p>
+        <label><input type="radio" name="q1"> Generate heat maps</label>
+        <label><input type="radio" name="q1"> Analyze nonlinear thermal effects</label>
+        <label><input type="radio" name="q1"> Study system dynamics near an operating point</label>
+        <label><input type="radio" name="q1"> Replace circuit simulation tools</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What is the first step in linearization?</p>
+        <label><input type="radio" name="q2"> Build a PCB</label>
+        <label><input type="radio" name="q2"> Choose random frequencies</label>
+        <label><input type="radio" name="q2"> Identify the steady-state operating point</label>
+        <label><input type="radio" name="q2"> Measure harmonic losses</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What mathematical tool is used in linearization?</p>
+        <label><input type="radio" name="q3"> Laplace inversion</label>
+        <label><input type="radio" name="q3"> Taylor series expansion</label>
+        <label><input type="radio" name="q3"> Monte Carlo simulation</label>
+        <label><input type="radio" name="q3"> Hilbert transform</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. Which of these is a benefit of linear models?</p>
+        <label><input type="radio" name="q4"> Real-time tuning without modeling</label>
+        <label><input type="radio" name="q4"> Easily applied to frequency-domain analysis</label>
+        <label><input type="radio" name="q4"> Capture switching harmonics exactly</label>
+        <label><input type="radio" name="q4"> Eliminate power losses</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What is typically derived from linearized models?</p>
+        <label><input type="radio" name="q5"> Cable lengths</label>
+        <label><input type="radio" name="q5"> Transfer functions or impedance models</label>
+        <label><input type="radio" name="q5"> Wiring diagrams</label>
+        <label><input type="radio" name="q5"> Cost analysis</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson3.html">← Previous Lesson</a>
+      <a href="lesson5.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

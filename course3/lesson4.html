@@ -1,0 +1,115 @@
+<!-- File: course3/lesson4.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 4 - Course 3</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 4: Power Sharing and Control in Mixed GFM-GFL Systems</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Learn how power sharing works between GFM and GFL inverters</li>
+      <li>Understand control hierarchy and coordination in mixed systems</li>
+      <li>Explore stability challenges in load sharing and voltage regulation</li>
+    </ul>
+
+    <h2>1. Coordination Between Inverter Types</h2>
+    <p>In a system with both GFM and GFL inverters, coordination is crucial. GFM inverters provide the grid reference, while GFL inverters inject current in response. Effective coordination ensures that all inverters contribute to power sharing without conflict or instability.</p>
+
+    <h2>2. Power Sharing Mechanisms</h2>
+    <p>Power sharing in GFM inverters is typically handled using droop control, which adjusts frequency and voltage as a function of active and reactive power output. GFL inverters regulate current magnitude and phase to follow the grid.</p>
+
+    <h2>3. Control Challenges</h2>
+    <ul>
+      <li><strong>Instability:</strong> Poor tuning can lead to oscillations between inverters</li>
+      <li><strong>Over-reliance on GFM:</strong> Too few GFM inverters can cause voltage and frequency collapse</li>
+      <li><strong>Uncoordinated response:</strong> Load changes may not be properly shared</li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFM inverters set the grid reference and use droop for power sharing</li>
+      <li>GFL inverters follow the grid by regulating injected current</li>
+      <li>Mixed systems require careful tuning and coordination for stability</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What does droop control help GFM inverters achieve?</p>
+        <label><input type="radio" name="q1"> PLL tuning</label>
+        <label><input type="radio" name="q1"> Power sharing through voltage and frequency adjustment</label>
+        <label><input type="radio" name="q1"> Battery equalization</label>
+        <label><input type="radio" name="q1"> Inertia injection</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What is the primary control variable for GFL inverters?</p>
+        <label><input type="radio" name="q2"> Voltage angle</label>
+        <label><input type="radio" name="q2"> Frequency amplitude</label>
+        <label><input type="radio" name="q2"> Output current</label>
+        <label><input type="radio" name="q2"> Reactive losses</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. Why can instability occur in mixed GFM-GFL systems?</p>
+        <label><input type="radio" name="q3"> Excessive power factor correction</label>
+        <label><input type="radio" name="q3"> Overvoltage on DC side</label>
+        <label><input type="radio" name="q3"> Poor control coordination between inverters</label>
+        <label><input type="radio" name="q3"> Lack of solar input</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What happens if there are too few GFM inverters?</p>
+        <label><input type="radio" name="q4"> Frequency stability improves</label>
+        <label><input type="radio" name="q4"> Voltage and frequency control may collapse</label>
+        <label><input type="radio" name="q4"> GFLs take over seamlessly</label>
+        <label><input type="radio" name="q4"> Droop is no longer needed</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What must be tuned carefully in mixed systems?</p>
+        <label><input type="radio" name="q5"> PLL tracking gain</label>
+        <label><input type="radio" name="q5"> Inverter internal temperatures</label>
+        <label><input type="radio" name="q5"> Control loops and droop settings</label>
+        <label><input type="radio" name="q5"> Solar panel angles</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson3.html">← Previous Lesson</a>
+      <a href="lesson5.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

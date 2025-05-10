@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 10 - GFL</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Lesson 10: Summary and Practical Considerations</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Summarize key points about Grid-Following Inverters (GFLs)</li>
+      <li>Understand practical design and deployment factors</li>
+      <li>Review the GFL role in the broader inverter-based grid</li>
+    </ul>
+
+    <h2>🔄 1. Course Recap</h2>
+    <ul>
+      <li>GFLs are current-controlled inverters that rely on an external voltage reference</li>
+      <li>They synchronize using Phase-Locked Loops (PLLs)</li>
+      <li>Control is structured with outer power and inner current loops</li>
+      <li>They are common in grid-tied solar, wind, and battery systems</li>
+    </ul>
+
+    <h2>🧬 2. Practical Design Tips</h2>
+    <ul>
+      <li>Ensure strong PLL tracking—especially in weak grids</li>
+      <li>Use fast, decoupled current control with feedforward terms</li>
+      <li>Apply proper protection coordination for low fault current systems</li>
+      <li>Consider compliance with evolving grid codes for ride-through and reactive support</li>
+    </ul>
+
+    <h2>🫶 3. Integration Considerations</h2>
+    <ul>
+      <li>GFLs require a voltage-forming source (synchronous machine or GFM)</li>
+      <li>Work best in strong grid environments or well-coordinated hybrid systems</li>
+      <li>GFLs are not suitable for black start or voltage formation</li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFL inverters are essential, scalable, and cost-effective solutions for renewable integration</li>
+      <li>They require a stable voltage reference and coordination with other grid-forming elements</li>
+      <li>Design and deployment must account for synchronization, protection, and grid strength</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+      <div class="quiz-question">
+        <p>1. What is a primary characteristic of a GFL inverter?</p>
+        <label><input type="radio" name="q1"> It forms voltage reference</label>
+        <label><input type="radio" name="q1"> It injects current based on grid voltage</label>
+        <label><input type="radio" name="q1"> It operates off-grid by default</label>
+        <label><input type="radio" name="q1"> It controls capacitor banks</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. Which control loop is faster in GFLs?</p>
+        <label><input type="radio" name="q2"> Outer loop</label>
+        <label><input type="radio" name="q2"> Inner current loop</label>
+        <label><input type="radio" name="q2"> PLL loop</label>
+        <label><input type="radio" name="q2"> Harmonic control loop</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What is a critical weakness of GFL inverters?</p>
+        <label><input type="radio" name="q3"> Incompatibility with solar panels</label>
+        <label><input type="radio" name="q3"> Limited current injection accuracy</label>
+        <label><input type="radio" name="q3"> Inability to form voltage reference</label>
+        <label><input type="radio" name="q3"> Excessive thermal drift</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. Where do GFLs work best?</p>
+        <label><input type="radio" name="q4"> In isolated microgrids</label>
+        <label><input type="radio" name="q4"> In strong grids with voltage reference</label>
+        <label><input type="radio" name="q4"> In battery-only systems</label>
+        <label><input type="radio" name="q4"> In off-grid diesel farms</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What should GFL design focus on?</p>
+        <label><input type="radio" name="q5"> Synchronization, protection, and compliance</label>
+        <label><input type="radio" name="q5"> Generator winding design</label>
+        <label><input type="radio" name="q5"> Mechanical insulation</label>
+        <label><input type="radio" name="q5"> Wireless power transfer</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson9.html">← Previous Lesson</a>
+      <a href="index.html">Back to Course Overview</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

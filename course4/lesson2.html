@@ -1,0 +1,120 @@
+<!-- File: course4/lesson2.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 2 - Course 4</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 2: Converter Topologies and Functional Principles</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Identify common topologies used in high-power converters</li>
+      <li>Understand the function of each topology in energy conversion</li>
+      <li>Recognize how topology influences modeling and control</li>
+    </ul>
+
+    <h2>1. Overview of Converter Topologies</h2>
+    <p>High-power converters are built using a range of topologies depending on the application, power level, and desired control features. Key topologies include:</p>
+    <ul>
+      <li><strong>Voltage Source Converter (VSC):</strong> Widely used in HVdc, FACTS, and wind power due to its controllability</li>
+      <li><strong>Current Source Converter (CSC):</strong> Used in traditional HVdc and some industrial drives</li>
+      <li><strong>Modular Multilevel Converter (MMC):</strong> Provides excellent scalability and harmonic performance</li>
+    </ul>
+
+    <h2>2. Functional Principles</h2>
+    <p>Each topology performs voltage and current conversion using semiconductor switches (IGBTs, GTOs, etc.). The switching strategy and filter design affect power quality, control dynamics, and overall system behavior.</p>
+
+    <h2>3. Impact on Modeling</h2>
+    <ul>
+      <li>VSCs are modeled as voltage-controlled systems with PWM dynamics</li>
+      <li>CSCs are modeled as current-regulated systems with commutation constraints</li>
+      <li>MMCs require submodule-level modeling and averaging for system studies</li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>Converter topologies define how power is processed and controlled</li>
+      <li>VSCs, CSCs, and MMCs each have specific modeling needs</li>
+      <li>Topology choice impacts performance, controllability, and stability</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. Which topology is most commonly used in modern HVdc systems?</p>
+        <label><input type="radio" name="q1"> Current Source Converter</label>
+        <label><input type="radio" name="q1"> Voltage Source Converter</label>
+        <label><input type="radio" name="q1"> Buck Converter</label>
+        <label><input type="radio" name="q1"> Boost Converter</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What is a key feature of MMCs?</p>
+        <label><input type="radio" name="q2"> Low cost</label>
+        <label><input type="radio" name="q2"> Simple circuitry</label>
+        <label><input type="radio" name="q2"> Modular structure and scalability</label>
+        <label><input type="radio" name="q2"> Single-phase use only</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What role do semiconductor switches play in converters?</p>
+        <label><input type="radio" name="q3"> Ground loops</label>
+        <label><input type="radio" name="q3"> Surge protection</label>
+        <label><input type="radio" name="q3"> Perform controlled switching for energy conversion</label>
+        <label><input type="radio" name="q3"> Passive voltage regulation</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What defines a CSC's control behavior?</p>
+        <label><input type="radio" name="q4"> PWM modulation</label>
+        <label><input type="radio" name="q4"> Voltage tracking</label>
+        <label><input type="radio" name="q4"> Current regulation and commutation logic</label>
+        <label><input type="radio" name="q4"> Digital phase detection</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What is required to model MMCs effectively?</p>
+        <label><input type="radio" name="q5"> Simple load resistor</label>
+        <label><input type="radio" name="q5"> Submodule-level modeling and averaging</label>
+        <label><input type="radio" name="q5"> Heat transfer equations</label>
+        <label><input type="radio" name="q5"> Hysteresis control loop</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson1.html">← Previous Lesson</a>
+      <a href="lesson3.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

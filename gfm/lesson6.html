@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 6 - GFM</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 6: Islanded and Hybrid Operation of Grid-Forming Inverters</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Describe how GFMs operate in islanded systems</li>
+      <li>Understand coordination between GFMs and GFLs in hybrid systems</li>
+      <li>Explain how GFMs enable microgrids and renewable-dominant grids</li>
+    </ul>
+
+    <h2>⛺ 1. Islanded Operation</h2>
+    <p>GFMs can operate in <strong>islanded mode</strong>, forming the grid voltage and frequency without any external reference. In this configuration, the GFM inverter is the primary source of power and reference for any connected loads. It acts as a stand-alone voltage source and must manage active and reactive power balance.</p>
+
+    <h2>🚀 2. Microgrid Applications</h2>
+    <p>Islanded GFMs are fundamental to <strong>microgrids</strong>, especially in remote, off-grid, or backup power systems. In such cases, a GFM inverter can be paired with batteries, solar, or diesel gensets to form a stable local grid. When the main grid is restored, GFMs can resynchronize and rejoin the larger system seamlessly.</p>
+
+    <h2>💪 3. Resilience and Autonomy</h2>
+    <p>GFMs in islanded mode support black start, fault ride-through, and load prioritization. These features allow critical infrastructure—such as hospitals or data centers—to maintain service even during broader grid outages. GFMs improve <strong>grid resilience</strong> and reduce reliance on traditional backup systems.</p>
+
+    <h2>🔧 4. Hybrid Systems with GFL Inverters</h2>
+    <p>In many systems, GFMs are deployed alongside <strong>Grid-Following Inverters (GFLs)</strong>. The GFM inverter forms the voltage and frequency reference, while GFLs inject power based on it. This hybrid approach allows low-cost GFLs to function reliably while GFMs provide the stability backbone. It also enables greater renewable penetration and flexible asset coordination.</p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFMs can operate independently in islanded mode</li>
+      <li>They are essential in microgrids and for black start and autonomy</li>
+      <li>Hybrid systems use GFMs for reference and GFLs for injection</li>
+      <li>Such setups improve system resilience, flexibility, and scalability</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What allows GFMs to operate in islanded mode?</p>
+        <label><input type="radio" name="q1"> PLL synchronization</label>
+        <label><input type="radio" name="q1"> Voltage-forming control</label>
+        <label><input type="radio" name="q1"> Load shedding</label>
+        <label><input type="radio" name="q1"> GFL pairing</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. In a hybrid system, what role does the GFM inverter play?</p>
+        <label><input type="radio" name="q2"> Follows the grid</label>
+        <label><input type="radio" name="q2"> Forms voltage and frequency reference</label>
+        <label><input type="radio" name="q2"> Measures reactive power</label>
+        <label><input type="radio" name="q2"> Bypasses faults</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What makes GFMs suitable for microgrids?</p>
+        <label><input type="radio" name="q3"> They use less wiring</label>
+        <label><input type="radio" name="q3"> They rely on grid transformers</label>
+        <label><input type="radio" name="q3"> They can maintain stable grid conditions independently</label>
+        <label><input type="radio" name="q3"> They operate at low frequency</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What does a hybrid GFM-GFL system enable?</p>
+        <label><input type="radio" name="q4"> Greater fossil fuel use</label>
+        <label><input type="radio" name="q4"> Full decentralization without GFLs</label>
+        <label><input type="radio" name="q4"> Scalable renewable integration</label>
+        <label><input type="radio" name="q4"> Direct AC-DC conversion</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What feature allows a GFM to reconnect with the main grid?</p>
+        <label><input type="radio" name="q5"> Phase-jump detection</label>
+        <label><input type="radio" name="q5"> Resynchronization control</label>
+        <label><input type="radio" name="q5"> Relay bypass</label>
+        <label><input type="radio" name="q5"> PLL override</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson5.html">← Previous Lesson</a>
+      <a href="lesson7.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

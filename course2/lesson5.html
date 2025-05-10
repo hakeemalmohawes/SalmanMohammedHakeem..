@@ -1,0 +1,123 @@
+<!-- File: courses/100-renewable-grid/lessons/lesson5.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 5 - 100% Renewable Grid</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 5: The Role of Energy Storage in Renewable Grids</h1>
+  </header>
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand why energy storage is critical for high renewable energy systems</li>
+      <li>Compare different types of storage technologies and their applications</li>
+      <li>Explain how storage supports grid reliability and flexibility</li>
+    </ul>
+
+    <h2>1. Why Storage Matters</h2>
+    <p>Renewable generation like solar and wind is not always available when needed. Energy storage allows us to save excess electricity when generation exceeds demand and release it when demand exceeds generation, helping to smooth variability and balance the grid.</p>
+
+    <h2>2. Types of Energy Storage</h2>
+    <ul>
+      <li><strong>Batteries:</strong> Lithium-ion batteries are widely used for fast, short-duration applications. Flow batteries and other chemistries are emerging for medium-duration use.</li>
+      <li><strong>Pumped hydro:</strong> Water is pumped uphill and released to generate electricity later—ideal for long-duration storage.</li>
+      <li><strong>Thermal storage:</strong> Heat is stored for later use, often in concentrated solar plants or for industrial processes.</li>
+      <li><strong>Hydrogen:</strong> Electricity is used to produce hydrogen, which can later be used as a fuel or reconverted to electricity.</li>
+    </ul>
+
+    <h2>3. Storage Applications</h2>
+    <ul>
+      <li><strong>Frequency regulation:</strong> Quickly absorb or inject power to stabilize the grid</li>
+      <li><strong>Peak shaving:</strong> Reduce demand during high-cost peak periods</li>
+      <li><strong>Backup power:</strong> Provide energy during outages or system failures</li>
+      <li><strong>Energy arbitrage:</strong> Buy low, store, and sell high when prices rise</li>
+    </ul>
+
+    <h2>4. Integrating Storage into the Grid</h2>
+    <p>To maximize its benefits, storage should be integrated with grid operations, planning, and market participation. This includes enabling storage to provide ancillary services, reducing barriers to interconnection, and creating fair compensation models.</p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>Energy storage is key to enabling 24/7 renewable electricity</li>
+      <li>Many technologies serve different time scales and use cases</li>
+      <li>Storage improves reliability, flexibility, and economic efficiency</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What is one main reason energy storage is important in renewable grids?</p>
+        <label><input type="radio" name="q1"> It increases fossil fuel usage</label>
+        <label><input type="radio" name="q1"> It eliminates the need for wind power</label>
+        <label><input type="radio" name="q1"> It balances supply and demand over time</label>
+        <label><input type="radio" name="q1"> It cools power plants</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. Which technology is best for long-duration storage?</p>
+        <label><input type="radio" name="q2"> Lithium-ion batteries</label>
+        <label><input type="radio" name="q2"> Flow batteries</label>
+        <label><input type="radio" name="q2"> Pumped hydro</label>
+        <label><input type="radio" name="q2"> Capacitors</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What does “peak shaving” mean?</p>
+        <label><input type="radio" name="q3"> Shaving solar panels</label>
+        <label><input type="radio" name="q3"> Reducing demand during peak hours</label>
+        <label><input type="radio" name="q3"> Adding more power lines</label>
+        <label><input type="radio" name="q3"> Lowering fuel quality</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What role does storage play in frequency regulation?</p>
+        <label><input type="radio" name="q4"> Making sure prices don’t change</label>
+        <label><input type="radio" name="q4"> Absorbing or supplying power quickly to stabilize the grid</label>
+        <label><input type="radio" name="q4"> Burning hydrogen for backup</label>
+        <label><input type="radio" name="q4"> Slowing down power generation</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. How can storage participate in electricity markets?</p>
+        <label><input type="radio" name="q5"> By charging only at night</label>
+        <label><input type="radio" name="q5"> By selling power whenever it wants</label>
+        <label><input type="radio" name="q5"> By providing services and storing energy for price arbitrage</label>
+        <label><input type="radio" name="q5"> By generating coal</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson4.html">← Previous Lesson</a>
+      <a href="lesson6.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

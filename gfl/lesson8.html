@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 8 - GFL</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 8: Fault Response and Protection Challenges</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Identify how GFL inverters respond to grid faults</li>
+      <li>Understand protection limitations in current-source inverters</li>
+      <li>Explore strategies for enhancing fault tolerance</li>
+    </ul>
+
+    <h2>⚠️ 1. Fault Current Limitation</h2>
+    <p>Unlike synchronous machines that can supply high fault current, GFL inverters limit current output to protect their semiconductors. This often leads to fault currents just slightly above rated current (1.1x–1.3x), which may be insufficient to trigger traditional overcurrent protection devices.</p>
+
+    <h2>🛡️ 2. Protection System Challenges</h2>
+    <ul>
+      <li>Low fault current magnitude reduces sensitivity of protection relays</li>
+      <li>Fast current limiting interferes with protection coordination</li>
+      <li>GFLs may disconnect rapidly to prevent internal damage</li>
+    </ul>
+
+    <h2>📊 3. Fault Ride-Through (FRT)</h2>
+    <p>Many GFL inverters are required to support fault ride-through by staying online during voltage dips and restoring output as the grid stabilizes. This requires advanced current controllers and dynamic voltage support modes, often mandated by grid codes.</p>
+
+    <h2>⚖️ 4. Strategies to Improve Fault Handling</h2>
+    <ul>
+      <li>Use of <strong>voltage-based detection</strong> (under-voltage, ROCOF)</li>
+      <li><strong>Communication-based protection</strong> across relays and inverters</li>
+      <li>Adding <strong>Grid-Forming Inverters</strong> to support low-fault-current conditions</li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFL inverters provide limited fault current and may disconnect quickly</li>
+      <li>Traditional protection methods may not work effectively</li>
+      <li>Advanced fault detection and hybrid support from GFMs improve system resilience</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. Why do GFL inverters limit fault current?</p>
+        <label><input type="radio" name="q1"> To enhance power quality</label>
+        <label><input type="radio" name="q1"> To protect internal components</label>
+        <label><input type="radio" name="q1"> To match grid codes</label>
+        <label><input type="radio" name="q1"> To stabilize voltage faster</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What is a downside of limited fault current?</p>
+        <label><input type="radio" name="q2"> Easier relay coordination</label>
+        <label><input type="radio" name="q2"> Better voltage stability</label>
+        <label><input type="radio" name="q2"> Insufficient fault detection</label>
+        <label><input type="radio" name="q2"> Improved black start</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What does FRT stand for?</p>
+        <label><input type="radio" name="q3"> Frequency Relay Timing</label>
+        <label><input type="radio" name="q3"> Fault Resistance Tracker</label>
+        <label><input type="radio" name="q3"> Fault Ride-Through</label>
+        <label><input type="radio" name="q3"> Fast Reactive Transmission</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. How can protection be enhanced in GFL systems?</p>
+        <label><input type="radio" name="q4"> By increasing inverter impedance</label>
+        <label><input type="radio" name="q4"> Through voltage and communication-based protection</label>
+        <label><input type="radio" name="q4"> By ignoring grid codes</label>
+        <label><input type="radio" name="q4"> Using only synchronous machines</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What type of inverter complements GFLs for fault support?</p>
+        <label><input type="radio" name="q5"> Off-grid inverters</label>
+        <label><input type="radio" name="q5"> Grid-Forming Inverters</label>
+        <label><input type="radio" name="q5"> Diesel generators</label>
+        <label><input type="radio" name="q5"> Static compensators</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson7.html">← Previous Lesson</a>
+      <a href="lesson9.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

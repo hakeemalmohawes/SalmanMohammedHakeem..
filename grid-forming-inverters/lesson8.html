@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 8 - Grid-Forming Inverters</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 8: Experimental Validation and Hardware Implementation</h1>
+  </header>
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Explore how grid-forming inverter (GFM) concepts are validated experimentally</li>
+      <li>Understand key hardware components and setups</li>
+      <li>Learn the role of testbeds and hardware-in-the-loop (HIL) testing</li>
+    </ul>
+
+    <h2>1. Importance of Experimental Validation</h2>
+    <p>Simulation alone cannot guarantee reliable GFM behavior in real systems. Lab-scale experiments, power hardware-in-the-loop (PHIL), and field tests help verify stability, interoperability, and controller robustness under realistic conditions.</p>
+
+    <h2>2. Hardware Architecture</h2>
+    <ul>
+      <li><strong>DC Source:</strong> Usually a PV emulator, battery system, or programmable DC supply</li>
+      <li><strong>Inverter Module:</strong> Implements control strategy (e.g., droop, VSM, dVOC)</li>
+      <li><strong>Filters:</strong> LCL filters smooth switching harmonics</li>
+      <li><strong>Load Bank:</strong> Adjustable for real/reactive power emulation</li>
+      <li><strong>Measurement System:</strong> Voltage, current, and phase sensors for feedback</li>
+    </ul>
+
+    <h2>3. Power Hardware-in-the-Loop (PHIL)</h2>
+    <p>PHIL integrates real inverter hardware into a simulated grid using a digital real-time simulator (DRTS). It enables repeatable testing with complex disturbances and allows tuning of control parameters before field deployment.</p>
+
+    <h2>4. Field Demonstrations</h2>
+    <p>Real-world trials of GFMs include islanded microgrids, solar+battery installations, and hybrid diesel-renewable systems. Demonstrations validate grid-forming capability, load sharing, black-start support, and fault ride-through performance.</p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>Experimental validation is key to bringing GFM technology into practical use</li>
+      <li>Testbeds combine DC sources, inverters, filters, and sensors</li>
+      <li>PHIL and field trials confirm controller effectiveness and reliability</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+      <div class="quiz-question">
+        <p>1. Why is experimental validation important?</p>
+        <label><input type="radio" name="q1"> To reduce EMI emissions</label>
+        <label><input type="radio" name="q1"> To confirm behavior under real conditions</label>
+        <label><input type="radio" name="q1"> To reduce inverter cost</label>
+        <label><input type="radio" name="q1"> To measure transformer losses</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What is the role of an LCL filter?</p>
+        <label><input type="radio" name="q2"> Inertia injection</label>
+        <label><input type="radio" name="q2"> Reactive load balancing</label>
+        <label><input type="radio" name="q2"> Smoothing inverter output</label>
+        <label><input type="radio" name="q2"> Data transmission</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What does PHIL testing involve?</p>
+        <label><input type="radio" name="q3"> Real inverter and real grid</label>
+        <label><input type="radio" name="q3"> Real inverter and simulated grid</label>
+        <label><input type="radio" name="q3"> Only software models</label>
+        <label><input type="radio" name="q3"> Mechanical prototypes</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What component is used to vary test load conditions?</p>
+        <label><input type="radio" name="q4"> DC link capacitor</label>
+        <label><input type="radio" name="q4"> LCL filter</label>
+        <label><input type="radio" name="q4"> Load bank</label>
+        <label><input type="radio" name="q4"> Voltage probe</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. Where are GFM field demonstrations commonly conducted?</p>
+        <label><input type="radio" name="q5"> Nuclear plants</label>
+        <label><input type="radio" name="q5"> Microgrids and solar+battery sites</label>
+        <label><input type="radio" name="q5"> Water pumping stations</label>
+        <label><input type="radio" name="q5"> Fiber optic substations</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson7.html">← Previous Lesson</a>
+      <a href="lesson9.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

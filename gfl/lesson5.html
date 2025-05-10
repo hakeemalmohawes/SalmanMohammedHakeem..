@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 5 - GFL</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 5: GFL Inverters in Grid-Tied Renewable Systems</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Explore typical applications of GFL inverters in renewable energy systems</li>
+      <li>Understand how GFLs are deployed in solar and wind power plants</li>
+      <li>Examine the benefits and challenges of using GFLs in grid-tied settings</li>
+    </ul>
+
+    <h2>🌍 1. GFLs in Solar PV Systems</h2>
+    <p>Grid-following inverters are the most common interface used in large-scale solar photovoltaic (PV) systems. They convert DC power from PV arrays into synchronized AC current, injecting it into the grid. Their cost-effectiveness and mature technology make them a reliable choice for utility-scale and residential applications.</p>
+
+    <h2>🌬️ 2. GFLs in Wind Energy Systems</h2>
+    <p>Many wind turbines also use GFL inverters, especially in Type-4 configurations where the generator is fully decoupled from the grid via back-to-back converters. The GFL side ensures that current is injected according to grid voltage and frequency, while the generator side extracts variable-speed wind energy efficiently.</p>
+
+    <h2>🏙️ 3. Deployment Characteristics</h2>
+    <ul>
+      <li>Often installed in clusters with centralized transformers</li>
+      <li>Configured to inject maximum power while staying synchronized</li>
+      <li>Designed to meet grid codes for voltage ride-through, reactive power, and frequency response</li>
+    </ul>
+
+    <h2>⚡ 4. Strengths and Weaknesses</h2>
+    <ul>
+      <li><strong>Strengths:</strong> Cost-effective, mature control algorithms, excellent for strong grids</li>
+      <li><strong>Limitations:</strong> Poor performance during faults or in weak grids, cannot operate autonomously</li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFL inverters are widely used in solar and wind systems connected to strong grids</li>
+      <li>They efficiently convert and inject current into the grid using synchronized control</li>
+      <li>System design must account for limitations under weak grid or islanding scenarios</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. Where are GFL inverters commonly used?</p>
+        <label><input type="radio" name="q1"> Hydroelectric dams</label>
+        <label><input type="radio" name="q1"> Grid-tied solar and wind farms</label>
+        <label><input type="radio" name="q1"> Off-grid diesel systems</label>
+        <label><input type="radio" name="q1"> Nuclear reactors</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What is a key benefit of GFL inverters in solar systems?</p>
+        <label><input type="radio" name="q2"> Black start ability</label>
+        <label><input type="radio" name="q2"> Islanding operation</label>
+        <label><input type="radio" name="q2"> Cost-effectiveness and synchronization</label>
+        <label><input type="radio" name="q2"> High thermal inertia</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. In Type-4 wind systems, GFL inverters:</p>
+        <label><input type="radio" name="q3"> Control blade pitch</label>
+        <label><input type="radio" name="q3"> Synchronize AC injection with the grid</label>
+        <label><input type="radio" name="q3"> Regulate generator torque directly</label>
+        <label><input type="radio" name="q3"> Convert AC to DC only</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What is a limitation of GFL inverters?</p>
+        <label><input type="radio" name="q4"> Overhead costs</label>
+        <label><input type="radio" name="q4"> Poor operation during grid faults</label>
+        <label><input type="radio" name="q4"> Excessive inertia</label>
+        <label><input type="radio" name="q4"> Lack of PI control</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. Why are GFLs suitable for strong grids?</p>
+        <label><input type="radio" name="q5"> They provide inertia</label>
+        <label><input type="radio" name="q5"> They depend on a stable voltage reference</label>
+        <label><input type="radio" name="q5"> They offer phase independence</label>
+        <label><input type="radio" name="q5"> They regulate temperature</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson4.html">← Previous Lesson</a>
+      <a href="lesson6.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

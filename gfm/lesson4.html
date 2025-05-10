@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 4 - GFM</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lesson 4: Control Strategies for Grid-Forming Inverters</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand the main control strategies used in GFM inverters</li>
+      <li>Differentiate between droop control, virtual oscillator control, and synchronverter methods</li>
+      <li>Recognize the impact of control strategy choice on system dynamics and coordination</li>
+    </ul>
+
+    <h2>⚖️ 1. Droop Control</h2>
+    <p><strong>Droop control</strong> is the most widely used control technique in GFM inverters. It adjusts the inverter’s frequency and voltage in response to changes in active and reactive power output, similar to how traditional synchronous generators behave. This approach allows multiple inverters to operate in parallel and share loads without requiring communication.</p>
+
+    <h2>🔢 2. Virtual Oscillator Control (VOC)</h2>
+    <p><strong>Virtual Oscillator Control</strong> mimics the behavior of nonlinear oscillators to achieve synchronization. It offers improved performance in systems with rapid transients and low inertia, and can stabilize microgrids more effectively in some scenarios. VOC is particularly useful in systems with limited communication or where fast synchronization is critical.</p>
+
+    <h2>⌚ 3. Synchronverters</h2>
+    <p><strong>Synchronverters</strong> emulate the full swing dynamics of synchronous generators, including inertia and damping. This approach gives GFMs a realistic machine-like response and facilitates integration into grids with conventional equipment. Synchronverters are more complex but offer better interaction with legacy protection systems.</p>
+
+    <h2>🌐 4. Choice of Control Strategy</h2>
+    <p>The choice between droop, VOC, or synchronverter depends on system objectives:</p>
+    <ul>
+      <li>Use <strong>droop control</strong> for general-purpose decentralized load sharing.</li>
+      <li>Use <strong>VOC</strong> when fast synchronization and transient handling are priorities.</li>
+      <li>Use <strong>synchronverter</strong> when close integration with conventional generation and protection is needed.</li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>GFM inverters rely on control strategies to regulate voltage, frequency, and dynamics</li>
+      <li>Droop control is simple and enables decentralized power sharing</li>
+      <li>VOC is nonlinear and offers fast transient response</li>
+      <li>Synchronverters mimic generator physics for realistic behavior</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What does droop control adjust in response to active power?</p>
+        <label><input type="radio" name="q1"> Voltage</label>
+        <label><input type="radio" name="q1"> Frequency</label>
+        <label><input type="radio" name="q1"> Resistance</label>
+        <label><input type="radio" name="q1"> Capacitance</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What is the primary advantage of virtual oscillator control?</p>
+        <label><input type="radio" name="q2"> Cost reduction</label>
+        <label><input type="radio" name="q2"> Improved synchronization and transient handling</label>
+        <label><input type="radio" name="q2"> Lower voltage harmonics</label>
+        <label><input type="radio" name="q2"> Easier hardware design</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. Which control method mimics the inertia and damping of synchronous machines?</p>
+        <label><input type="radio" name="q3"> PI control</label>
+        <label><input type="radio" name="q3"> VOC</label>
+        <label><input type="radio" name="q3"> Synchronverter</label>
+        <label><input type="radio" name="q3"> Hysteresis control</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. When is droop control most effective?</p>
+        <label><input type="radio" name="q4"> In systems requiring centralized coordination</label>
+        <label><input type="radio" name="q4"> In decentralized, multi-inverter networks</label>
+        <label><input type="radio" name="q4"> When islanded with no loads</label>
+        <label><input type="radio" name="q4"> In pure current source systems</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. Synchronverters are most useful when:</p>
+        <label><input type="radio" name="q5"> No protection systems are needed</label>
+        <label><input type="radio" name="q5"> Interfacing with legacy synchronous infrastructure</label>
+        <label><input type="radio" name="q5"> Operating in off-grid systems only</label>
+        <label><input type="radio" name="q5"> Following PLL references</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson3.html">← Previous Lesson</a>
+      <a href="lesson5.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

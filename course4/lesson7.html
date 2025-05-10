@@ -1,0 +1,120 @@
+<!-- File: course4/lesson7.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 7 - Course 4</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 7: Harmonic Analysis and Filter Modeling</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand sources of harmonics in power converters</li>
+      <li>Learn how filters are modeled to mitigate harmonics</li>
+      <li>Explore design trade-offs in filter performance and dynamics</li>
+    </ul>
+
+    <h2>1. Harmonic Generation in Converters</h2>
+    <p>Switching actions in converters create harmonics due to non-sinusoidal waveforms. These harmonics can degrade power quality, stress components, and interfere with control performance if not properly mitigated.</p>
+
+    <h2>2. Common Filter Types</h2>
+    <ul>
+      <li><strong>L filters:</strong> Simple and compact, but limited high-frequency attenuation</li>
+      <li><strong>LC filters:</strong> Provide stronger attenuation at a specific corner frequency</li>
+      <li><strong>LCL filters:</strong> Widely used in grid-connected converters, offering better damping of switching harmonics</li>
+    </ul>
+
+    <h2>3. Filter Modeling Techniques</h2>
+    <p>Filters are typically modeled in the frequency domain using transfer functions or impedance representations. Key factors include:</p>
+    <ul>
+      <li>Resonant frequencies and damping characteristics</li>
+      <li>Interaction with converter control loops</li>
+      <li>Effect on stability and phase margin</li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>Harmonics in converters are caused by switching</li>
+      <li>Filters like L, LC, and LCL are used to attenuate harmonics</li>
+      <li>Filter design impacts both power quality and system stability</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What causes harmonics in power converters?</p>
+        <label><input type="radio" name="q1"> Mechanical misalignment</label>
+        <label><input type="radio" name="q1"> Switching non-sinusoidal waveforms</label>
+        <label><input type="radio" name="q1"> Improper cabling</label>
+        <label><input type="radio" name="q1"> Excessive filtering</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What is the role of an LCL filter?</p>
+        <label><input type="radio" name="q2"> Reduce copper loss</label>
+        <label><input type="radio" name="q2"> Minimize DC bus voltage</label>
+        <label><input type="radio" name="q2"> Attenuate high-frequency harmonics with strong damping</label>
+        <label><input type="radio" name="q2"> Eliminate EMI filters</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. Which filter offers the simplest structure?</p>
+        <label><input type="radio" name="q3"> LCL filter</label>
+        <label><input type="radio" name="q3"> LC filter</label>
+        <label><input type="radio" name="q3"> L filter</label>
+        <label><input type="radio" name="q3"> Passive damped filter</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. Why is filter modeling important?</p>
+        <label><input type="radio" name="q4"> To estimate circuit breaker size</label>
+        <label><input type="radio" name="q4"> To understand filter influence on system dynamics</label>
+        <label><input type="radio" name="q4"> To improve insulation resistance</label>
+        <label><input type="radio" name="q4"> To boost transformer voltage</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What should filter design avoid?</p>
+        <label><input type="radio" name="q5"> Excessive damping</label>
+        <label><input type="radio" name="q5"> Impedance shaping</label>
+        <label><input type="radio" name="q5"> Unstable interaction with control loops</label>
+        <label><input type="radio" name="q5"> High corner frequency</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson6.html">← Previous Lesson</a>
+      <a href="lesson8.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

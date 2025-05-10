@@ -1,0 +1,115 @@
+<!-- File: course3/lesson9.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 9 - Course 3</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 9: Simulation and Testing of Dual-Control Inverter Systems</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand simulation practices for GFM and GFL inverter systems</li>
+      <li>Explore model-based and hardware-in-the-loop testing methods</li>
+      <li>Learn how duality simplifies test scenarios</li>
+    </ul>
+
+    <h2>1. Importance of Simulation</h2>
+    <p>Before deploying inverter-based systems, simulation is used to evaluate stability, performance, and control interactions. Testing GFM and GFL roles under dynamic scenarios helps refine control design and dispatch strategies.</p>
+
+    <h2>2. Duality and Testing Strategy</h2>
+    <p>By leveraging duality, system behavior under disturbances can be explored in a structured way. GFM and GFL inverters are modeled with mirrored assumptions, allowing scalable test design for system-level behavior under fault, load steps, and grid disconnection.</p>
+
+    <h2>3. Common Tools and Methods</h2>
+    <ul>
+      <li><strong>Time-domain simulation:</strong> Evaluate frequency and voltage dynamics</li>
+      <li><strong>Hardware-in-the-loop (HIL):</strong> Integrates real control hardware into virtual grids</li>
+      <li><strong>RTDS and EMT tools:</strong> Offer fast, real-time dynamic response analysis</li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>Testing GFM and GFL systems is critical for reliable deployment</li>
+      <li>Duality helps simplify and structure simulation frameworks</li>
+      <li>Both software and hardware-based tools are used in modern validation</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. Why is simulation important before deployment?</p>
+        <label><input type="radio" name="q1"> To replace grid sensors</label>
+        <label><input type="radio" name="q1"> To evaluate system stability and performance</label>
+        <label><input type="radio" name="q1"> To clean inverter fans</label>
+        <label><input type="radio" name="q1"> To reduce panel area</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What does duality enable in testing?</p>
+        <label><input type="radio" name="q2"> Elimination of PLLs</label>
+        <label><input type="radio" name="q2"> Structured and mirrored scenario design</label>
+        <label><input type="radio" name="q2"> Replacement of transformers</label>
+        <label><input type="radio" name="q2"> Manual control overrides</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What is Hardware-in-the-Loop (HIL)?</p>
+        <label><input type="radio" name="q3"> A theoretical control model</label>
+        <label><input type="radio" name="q3"> Integration of physical control hardware in simulation</label>
+        <label><input type="radio" name="q3"> A type of frequency filter</label>
+        <label><input type="radio" name="q3"> A grid voltage sensor</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What tool is commonly used for real-time inverter simulation?</p>
+        <label><input type="radio" name="q4"> Excel sheets</label>
+        <label><input type="radio" name="q4"> RTDS or EMT simulators</label>
+        <label><input type="radio" name="q4"> JavaScript consoles</label>
+        <label><input type="radio" name="q4"> PV inverters only</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What kind of models are used to test load steps and grid disconnections?</p>
+        <label><input type="radio" name="q5"> HVAC wiring</label>
+        <label><input type="radio" name="q5"> Time-domain inverter models</label>
+        <label><input type="radio" name="q5"> Cable grounding tests</label>
+        <label><input type="radio" name="q5"> Solar panel thermal maps</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson8.html">← Previous Lesson</a>
+      <a href="lesson10.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

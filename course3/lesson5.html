@@ -1,0 +1,115 @@
+<!-- File: course3/lesson5.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 5 - Course 3</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 5: Stability Analysis Using the Duality Framework</h1>
+  </header>
+
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Learn how the duality framework is applied to stability analysis</li>
+      <li>Identify how inverter roles influence system dynamics</li>
+      <li>Understand the implications of inverter placement and strength</li>
+    </ul>
+
+    <h2>1. Purpose of Stability Analysis</h2>
+    <p>As inverters increasingly dominate power systems, ensuring small-signal and large-signal stability becomes critical. The duality framework helps identify and interpret the different contributions of GFM and GFL inverters to system behavior.</p>
+
+    <h2>2. Applying Duality to Stability Models</h2>
+    <p>By treating GFM and GFL inverters as dual systems — one as a voltage source and the other as a current source — control designers can map their interaction, coupling, and stability constraints. This simplifies multi-inverter system analysis.</p>
+
+    <h2>3. Sensitivity and Placement</h2>
+    <ul>
+      <li><strong>GFM Strength:</strong> The more GFM inverters and their capacity, the more robust the system</li>
+      <li><strong>GFL Location:</strong> Improper placement can amplify disturbances if not supported by nearby GFM units</li>
+      <li><strong>Control Coupling:</strong> Unstable eigenvalues may result from poorly tuned control loops or latency</li>
+    </ul>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>Duality provides insight into dynamic interactions between inverters</li>
+      <li>Stability depends on both inverter types and their coordination</li>
+      <li>Control placement and strength are crucial to robustness</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What does the duality framework help analyze?</p>
+        <label><input type="radio" name="q1"> Hardware failures</label>
+        <label><input type="radio" name="q1"> Power flow directions</label>
+        <label><input type="radio" name="q1"> Stability between GFM and GFL inverters</label>
+        <label><input type="radio" name="q1"> Grid construction costs</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What improves system robustness in inverter-based grids?</p>
+        <label><input type="radio" name="q2"> Adding GFL units only</label>
+        <label><input type="radio" name="q2"> Removing all droop controllers</label>
+        <label><input type="radio" name="q2"> Increasing GFM capacity and distribution</label>
+        <label><input type="radio" name="q2"> Lowering switching frequency</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What can result from poor GFL placement?</p>
+        <label><input type="radio" name="q3"> Higher efficiency</label>
+        <label><input type="radio" name="q3"> Local frequency control</label>
+        <label><input type="radio" name="q3"> Amplification of grid disturbances</label>
+        <label><input type="radio" name="q3"> Better load sharing</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. What kind of models benefit from duality interpretation?</p>
+        <label><input type="radio" name="q4"> Static models</label>
+        <label><input type="radio" name="q4"> Mechanical turbine models</label>
+        <label><input type="radio" name="q4"> Dynamic stability models</label>
+        <label><input type="radio" name="q4"> Battery storage specs</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What can cause unstable eigenvalues in inverter systems?</p>
+        <label><input type="radio" name="q5"> Good tuning</label>
+        <label><input type="radio" name="q5"> Proper inverter spacing</label>
+        <label><input type="radio" name="q5"> Poor controller tuning or delay</label>
+        <label><input type="radio" name="q5"> Droop margin increase</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson4.html">← Previous Lesson</a>
+      <a href="lesson6.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>

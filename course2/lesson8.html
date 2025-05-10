@@ -1,0 +1,121 @@
+ <!-- File: courses/100-renewable-grid/lessons/lesson8.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 8 - 100% Renewable Grid</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #333; margin: 0; padding: 0; }
+    header { background: #0d6efd; color: white; padding: 20px 40px; text-align: center; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+    h2 { border-left: 4px solid #0d6efd; padding-left: 10px; margin-top: 30px; }
+    ul { line-height: 1.6; }
+    .quiz { background: white; border: 1px solid #ddd; padding: 20px; margin-top: 30px; border-radius: 6px; }
+    .quiz-question { margin-bottom: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 10px; padding: 8px 16px; background: #0d6efd; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    .nav-links { margin-top: 40px; display: flex; justify-content: space-between; }
+    footer { text-align: center; padding: 20px; background: #e9ecef; font-size: 0.95rem; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lesson 8: System Operations in a 100% Renewable Grid</h1>
+  </header>
+  <div class="container">
+    <h2>🌟 Learning Objectives</h2>
+    <ul>
+      <li>Understand how system operations must evolve for renewable-dominant grids</li>
+      <li>Describe the role of forecasting, scheduling, and real-time control</li>
+      <li>Explain the concept of balancing services and reserves</li>
+    </ul>
+
+    <h2>1. New Operational Paradigms</h2>
+    <p>In a 100% renewable grid, operations must adapt to a system with less dispatchable generation and more weather-dependent sources. This means operators must rely more on forecasts, rapid flexibility, and automated decision-making.</p>
+
+    <h2>2. Forecasting and Scheduling</h2>
+    <p>Advanced forecasting of solar and wind is essential for day-ahead and intraday scheduling. These forecasts inform commitment of storage, flexible demand, and balancing resources to prepare for variability and uncertainty.</p>
+
+    <h2>3. Real-Time Balancing</h2>
+    <p>Real-time control becomes more dynamic. Fast-acting resources like batteries and demand response must respond to deviations from forecasts. Grid operators must monitor frequency and voltage stability closely and use digital tools for automatic corrections.</p>
+
+    <h2>4. Reserves and Flexibility Services</h2>
+    <ul>
+      <li><strong>Spinning reserve:</strong> Online resources that can increase output instantly</li>
+      <li><strong>Non-spinning reserve:</strong> Resources that can be brought online quickly if needed</li>
+      <li><strong>Frequency response:</strong> Automated, fast-acting support during disturbances</li>
+      <li><strong>Ramp products:</strong> Support during rapid changes in renewable output</li>
+    </ul>
+
+    <h2>5. Control Centers and Grid Visibility</h2>
+    <p>Operators use energy management systems (EMS) and distribution management systems (DMS) to maintain grid stability. Enhanced visibility into inverter-based generation and load behavior is critical to keeping the system reliable.</p>
+
+    <h2>✅ Summary</h2>
+    <ul>
+      <li>System operations must adapt to variability and lack of inertia</li>
+      <li>Forecasting, flexibility, and reserves are key tools</li>
+      <li>Real-time automation and grid visibility are increasingly important</li>
+    </ul>
+
+    <div class="quiz">
+      <h2>🧪 Quiz (5 Questions)</h2>
+
+      <div class="quiz-question">
+        <p>1. What replaces conventional dispatchable generation in a renewable grid?</p>
+        <label><input type="radio" name="q1"> Coal and nuclear</label>
+        <label><input type="radio" name="q1"> Forecasts, flexibility, and storage</label>
+        <label><input type="radio" name="q1"> Fuel subsidies</label>
+        <label><input type="radio" name="q1"> Larger power plants</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. What is the role of forecasting in operations?</p>
+        <label><input type="radio" name="q2"> Improve billing systems</label>
+        <label><input type="radio" name="q2"> Prevent EV adoption</label>
+        <label><input type="radio" name="q2"> Plan day-ahead and intraday schedules</label>
+        <label><input type="radio" name="q2"> Increase fuel imports</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. What is a spinning reserve?</p>
+        <label><input type="radio" name="q3"> A backup battery</label>
+        <label><input type="radio" name="q3"> A resource already running that can ramp up</label>
+        <label><input type="radio" name="q3"> A forecasting tool</label>
+        <label><input type="radio" name="q3"> A software application</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. Why is real-time automation important?</p>
+        <label><input type="radio" name="q4"> Because all loads are fixed</label>
+        <label><input type="radio" name="q4"> To reduce coal output</label>
+        <label><input type="radio" name="q4"> To make coffee machines smarter</label>
+        <label><input type="radio" name="q4"> To manage fast deviations and support stability</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. What do EMS and DMS help with?</p>
+        <label><input type="radio" name="q5"> Solar panel cleaning</label>
+        <label><input type="radio" name="q5"> Customer loyalty programs</label>
+        <label><input type="radio" name="q5"> Grid visibility and operational control</label>
+        <label><input type="radio" name="q5"> Forecasting weather only</label>
+      </div>
+
+      <button onclick="submitQuiz(this.closest('.quiz'))">Submit Answers</button>
+
+    </div>
+
+    <div class="nav-links">
+      <a href="lesson7.html">← Previous Lesson</a>
+      <a href="lesson9.html">Next Lesson →</a>
+    </div>
+  </div>
+
+  <footer>
+    Created by Mohammed, Salman and Hakeem
+  </footer>
+<script src="../js/script.js"></script>
+
+</body>
+</html>
