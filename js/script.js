@@ -52,7 +52,7 @@ const correctAnswers = {
     lesson2: [1, 1, 1, 1, 1],
     lesson3: [2, 1, 2, 1, 1],
     lesson4: [1, 2, 2, 1, 2],
-    lesson5: [2, 0, 2, 2, 1],
+    lesson5: [2, 2, 2, 2, 2],
     lesson6: [1, 1, 1, 1, 2],
     lesson7: [1, 1, 1, 1, 2],
     lesson8: [2, 0, 2, 1, 2],
